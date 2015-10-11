@@ -1,0 +1,8 @@
+Information Namenliste
+Nur Vornamen und Namen eingeben.
+Zusätzliche Eingaben werden ignoriert.
+Aufbau: Nur je ein Vorname und ein Nachname, getrennt durch Leerschlag oder Tabulator.
+Unterstriche für Doppelnamen sind zugelassen.
+Doppelte Namen werden ignoriert.
+Die Namen können auch aus einer Namenliste importiert werden.
+Das Dokument muss im Format .doc oder .txt vorliegen.

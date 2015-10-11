@@ -29,7 +29,7 @@
 {
    [self setLocation:NSMakePoint(0.0,0.0)];
    [self setItemColor:[NSColor greenColor]];
-   [self setBackgroundColor:[NSColor grayColor]];
+   [self setBackgroundColor:[NSColor blueColor]];
 }
 - (void)setItemColor:(NSColor *)aColor
 {
@@ -103,7 +103,7 @@
     
    // erase the background by drawing white
    [[NSColor whiteColor] set];
-   [NSBezierPath fillRect:dirtyRect];
+   //[NSBezierPath fillRect:dirtyRect];
    
    // set the current color for the draggable item
    [[self itemColor] set];

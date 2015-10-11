@@ -1,0 +1,6 @@
+Information Einzelnamen
+Nur Vornamen und Namen eingeben.
+Zusätzliche Eingaben werden ignoriert.
+Aufbau: Nur je ein Vorname und ein Nachname, getrennt durch Leerschlag oder Tabulator.
+Unterstriche für Doppelnamen sind zugelassen.
+Die Namen können auch aus einem Dokument in das Textfeld kopiert werden.

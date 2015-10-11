@@ -94,6 +94,8 @@
    int nurTitelZuNamenOption;
    
     IBOutlet rRahmen* titelrahmen;
+   IBOutlet rRahmen* recorderrahmen;
+   IBOutlet rRahmen* playerrahmen;
 }
 @property IBOutlet NSButton*      Knopf;
 @property IBOutlet  NSTextField*   Feld;

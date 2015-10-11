@@ -95,7 +95,11 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
 - (void)awakeFromNib
 {
    NSLog(@"awakeFromNib");
-   [titelrahmen setItemColor:[NSColor greenColor]];
+   NSColor* rahmenfarbe =[NSColor greenColor];
+   [titelrahmen setItemColor:rahmenfarbe];
+   [titelrahmen setIdentifier:@"13"];
+   [recorderrahmen setItemColor:rahmenfarbe];
+   [playerrahmen setItemColor:rahmenfarbe];
    
    // [titelrahmen setNeedsDisplay:YES];
 }
@@ -5869,7 +5873,7 @@ if (!self.KommentarFenster)
    
    [titelrahmen setBackgroundColor:[NSColor redColor]];
    [titelrahmen setNeedsDisplay:YES];
-   [self.Feld setIntValue:1];
+   [self.Feld setStringValue:[titelrahmen identifier]];
 }
 
 
