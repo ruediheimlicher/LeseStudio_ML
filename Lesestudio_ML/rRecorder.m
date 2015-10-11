@@ -94,7 +94,7 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
 
 - (void)awakeFromNib
 {
-   NSLog(@"awakeFromNib");
+   NSLog(@"Recorder awakeFromNib");
    NSColor* rahmenfarbe =[NSColor greenColor];
    [titelrahmen setItemColor:rahmenfarbe];
    [titelrahmen setIdentifier:@"13"];
@@ -102,6 +102,12 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    [playerrahmen setItemColor:rahmenfarbe];
    
    // [titelrahmen setNeedsDisplay:YES];
+   NSBundle* LesestudioBundle = [NSBundle mainBundle];
+   NSString* ResourcePfad = [[LesestudioBundle bundlePath]stringByAppendingPathComponent:@"Contents/Resources"];
+   NSArray* mainarray = [[NSFileManager defaultManager]contentsOfDirectoryAtPath:ResourcePfad error:nil];
+   NSLog(@"mainarray: %@",mainarray);
+   
+
 }
 
 
