@@ -1,0 +1,7 @@
+Information Clean
+In der Namenliste werden die im Projekt vorhandenen LeserInnen angegeben.
+
+Die Titelliste zeigt die Aufnahmen, die im Projekt vorhanden sind, und wie oft sie vorkommen.
+
+Die angeklickten Aufnahmen der angeklickten LeserInnen können geläscht werden.
+Es können alle bis auf die markierten oder alle bis auf einen einstellbaren Rest verschoben oder gelöscht werden.
