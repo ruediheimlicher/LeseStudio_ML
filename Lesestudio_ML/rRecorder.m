@@ -598,6 +598,127 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    // Menu-Akivierungen
    
    // +++++++++
+   NSFileManager *Filemanager = [NSFileManager defaultManager];
+   
+   
+   BOOL PListBusy=YES;
+   int runde=0;
+   while (PListBusy)
+   {
+      runde++;
+      BOOL PListOK=[self Leseboxvorbereiten];
+      
+      
+      PListBusy=!PListOK;
+      if (runde==20)
+      {
+         PListBusy=NO;
+      }
+   }//while
+   
+   [Utils setPListBusy:NO anPfad:self.LeseboxPfad];
+   
+   
+   NSURL* URLPfad=[[NSURL alloc]initFileURLWithPath:self.LeseboxPfad];
+   
+   NSMutableDictionary* NotificationDic=[[NSMutableDictionary alloc]initWithCapacity:0];
+   [NotificationDic setObject:self.LeseboxPfad forKey:@"leseboxpfad"];
+   [NotificationDic setObject:self.ArchivPfad forKey:@"archivpfad"];
+   
+   [NotificationDic setObject:self.ProjektPfad forKey:@"projektpfad"];
+   [NotificationDic setObject:self.ProjektArray forKey:@"projektarray"];
+   
+   [nc postNotificationName:@"Utils" object:self userInfo:NotificationDic];
+   NSLog(@"awake H");
+   
+   [self.ProjektFeld setStringValue:[self.ProjektPfad lastPathComponent]];
+   [self.RecorderMenu setSubmenu:self.ProjektMenu forItem:[self.RecorderMenu itemWithTag:kRecorderProjektWahlenTag]];
+   
+   self.neueSettings=NO;
+   switch (self.Umgebung)
+   {
+      case 1:
+      {
+         //NSLog(@"vor beginAdminPlayer:      ProjektArray: \n%@",[ProjektArray description]);
+         
+         if(!self.AdminZugangOK)
+         {
+            self.AdminZugangOK=[self checkAdminZugang];
+         }
+         if (self.AdminZugangOK)
+            
+         {
+            //self.Umgebung=1;
+            //NSLog(@"PListDic nach checkAdminZugang: %@",[PListDic description]);
+            [Utils setPListBusy:NO anPfad:self.LeseboxPfad];
+            
+            [self beginAdminPlayer:nil];
+            //NSLog(@"PListDic nach beginAdminPlayer: %@",[PListDic description]);
+            
+            
+            return;
+         }
+         else
+         {
+            //NSLog(@"case kAdminUmgebung: Zugang nicht OK");
+            
+            self.Umgebung=0;
+            //Kein gültiges PW für Admin, also Recorder öffnen
+            if (![self NamenListeValidAnPfad:self.ProjektPfad]||([self checkAdminPW]==NO))//Im Projektordner sind keine Namen
+            {
+               NSAlert *Warnung = [[NSAlert alloc] init];
+               
+               [Warnung addButtonWithTitle:locBeenden];
+               [Warnung setMessageText:@"Kein gültiges Admin-Passwort"];
+               
+               NSString* s1=@"Ordner für  Projekt xx ist leer";
+               NSString* s2=[NSString stringWithFormat:s1,[self.ProjektPfad lastPathComponent]];
+               
+               NSString* s3=@"Das Programm wird beendet";
+               NSString* InformationString=[NSString stringWithFormat:@"%@\n%@",s2,s3];
+               [Warnung setInformativeText:InformationString];
+               [Warnung setAlertStyle:NSWarningAlertStyle];
+               
+               //[Warnung setIcon:RPImage];
+               long antwort=[Warnung runModal];
+               if ([self checkAdminPW]==NO)//Neue LB, noch kein checkAdminPW gesetzt, aufräumen
+               {
+                  
+                  if ([Filemanager fileExistsAtPath:self.LeseboxPfad])
+                  {
+                     //NSLog(@"awake LB entfernen: %@",self.LeseboxPfad);
+                     [Filemanager removeItemAtURL:[NSURL fileURLWithPath:self.LeseboxPfad] error:NULL];
+                  }
+                  [Utils setPListBusy:NO anPfad:self.LeseboxPfad];
+                  [NSApp terminate:self];
+                  
+               }
+               else
+               {
+                  [self terminate:NULL];//ordentlich aussteigen
+               }
+            }
+            
+            
+         }
+         
+         
+      }break;
+      case 0:
+      {
+         
+      }break;
+      default:
+      {
+         //NSLog(@"switch RPModus: terminate");
+         [Utils setPListBusy:NO anPfad:self.LeseboxPfad];
+         [NSApp terminate:NULL];
+         
+      }
+         
+   }//Switch Umgebung
+   
+NSLog(@"awake I");
    
 }
 
@@ -1010,6 +1131,9 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    [NotificationDic setObject:self.ProjektArray forKey:@"projektarray"];
    
    [nc postNotificationName:@"Utils" object:self userInfo:NotificationDic];
+  
+   NSLog(@"projektpfad: %@",self.ProjektPfad);
+   
    [self.ProjektFeld setStringValue:[self.ProjektPfad lastPathComponent]];
    [self.RecorderMenu setSubmenu:self.ProjektMenu forItem:[self.RecorderMenu itemWithTag:kRecorderProjektWahlenTag]];
    
@@ -1096,7 +1220,8 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
       }
          
    }//Switch Umgebung
-   
+  
+   // i
    [self Aufnahmevorbereiten];
    NSFont* Lesernamenfont;
    Lesernamenfont=[NSFont fontWithName:@"Helvetica" size: 20];
