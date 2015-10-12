@@ -708,67 +708,6 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2v9-Va-Tqg" customClass="rRahmen">
-                        <rect key="frame" x="20" y="799" width="586" height="95"/>
-                        <subviews>
-                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUa-i0-9Tx">
-                                <rect key="frame" x="196" y="11" width="340" height="26"/>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" usesSingleLineMode="YES" completes="NO" numberOfVisibleItems="5" id="4pN-fu-Wg3">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" white="0.1000000015" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" white="0.94999998809999997" alpha="1" colorSpace="calibratedWhite"/>
-                                </comboBoxCell>
-                            </comboBox>
-                        </subviews>
-                    </customView>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5v1-k0-KWh">
-                        <rect key="frame" x="27" y="853" width="181" height="26"/>
-                        <popUpButtonCell key="cell" type="push" title="Leser wählen" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" borderStyle="borderAndBezel" inset="2" pullsDown="YES" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="CkM-D4-yrw" id="Nbm-uC-18h">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system" size="14"/>
-                            <menu key="menu" title="OtherViews" id="a6x-fp-HK2">
-                                <items>
-                                    <menuItem title="Leser wählen" hidden="YES" id="CkM-D4-yrw"/>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                    </popUpButton>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMR-f9-gMU">
-                        <rect key="frame" x="216" y="852" width="362" height="32"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="DZV-O1-fIG">
-                            <font key="font" metaFont="system" size="22"/>
-                            <color key="textColor" red="0.57414466139999998" green="0.80612242219999997" blue="0.50161385540000003" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyt-KK-XsF">
-                        <rect key="frame" x="123" y="808" width="26" height="24"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="right" title="0" id="gRU-YE-xgg">
-                            <font key="font" metaFont="system" size="14"/>
-                            <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Mi-Uz-jfo">
-                        <rect key="frame" x="61" y="808" width="62" height="24"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Timeout:" id="naP-XT-qZH">
-                            <font key="font" metaFont="system" size="14"/>
-                            <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esh-PD-CLe">
-                        <rect key="frame" x="159" y="808" width="49" height="24"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Titel:" id="aXy-bU-AZ7">
-                            <font key="font" metaFont="system" size="14"/>
-                            <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHC-zk-0Tu">
-                        <rect key="frame" x="560" y="809" width="26" height="28"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Fcc-tX-5q7"/>
-                    </imageView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daf-n6-uM8">
                         <rect key="frame" x="100" y="31" width="82" height="32"/>
                         <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8hQ-A0-j0H">
@@ -818,7 +757,7 @@
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpt-YQ-BI9">
                                                         <rect key="frame" x="18" y="25" width="227" height="47"/>
-                                                        <buttonCell key="cell" type="squareTextured" title="START" bezelStyle="texturedSquare" image="mikrofonicon_w" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yKY-xT-EgK">
+                                                        <buttonCell key="cell" type="squareTextured" title="START" alternateTitle="STOP" bezelStyle="texturedSquare" image="mikrofonicon_w" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yKY-xT-EgK">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" size="24" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <string key="keyEquivalent">r</string>
@@ -860,7 +799,7 @@
                                                         <rect key="frame" x="8" y="138" width="223" height="24"/>
                                                     </customView>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVl-pR-IQw">
-                                                        <rect key="frame" x="17" y="37" width="31" height="32"/>
+                                                        <rect key="frame" x="17" y="20" width="31" height="37"/>
                                                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="playicon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ffy-wV-f25">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -870,73 +809,73 @@
                                                         </connections>
                                                     </button>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05U-uE-EUn">
-                                                        <rect key="frame" x="104" y="83" width="50" height="22"/>
+                                                        <rect key="frame" x="93" y="64" width="50" height="22"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Stop" id="sx9-IH-fPi">
-                                                            <font key="font" metaFont="system" size="14"/>
+                                                            <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMH-rN-dqe">
-                                                        <rect key="frame" x="29" y="83" width="50" height="22"/>
+                                                        <rect key="frame" x="7" y="64" width="50" height="22"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Start" id="xcZ-MQ-hwa">
-                                                            <font key="font" metaFont="system" size="14"/>
+                                                            <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdL-UT-shg">
-                                                        <rect key="frame" x="179" y="83" width="58" height="22"/>
+                                                        <rect key="frame" x="187" y="64" width="58" height="22"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Zurück" id="Z8Z-G9-Lxn">
-                                                            <font key="font" metaFont="system" size="14"/>
+                                                            <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xPm-dK-gGu">
-                                                        <rect key="frame" x="62" y="37" width="32" height="32"/>
+                                                        <rect key="frame" x="62" y="20" width="32" height="37"/>
                                                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="rewindicon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YpE-Ea-8dq">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7N-Mx-3yL">
-                                                        <rect key="frame" x="102" y="37" width="32" height="32"/>
+                                                        <rect key="frame" x="102" y="20" width="32" height="37"/>
                                                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="halticon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aEI-Mq-gw4">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-Qn-g0n">
-                                                        <rect key="frame" x="75" y="112" width="80" height="18"/>
+                                                        <rect key="frame" x="78" y="109" width="80" height="18"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Abspielzeit" id="qVL-R6-QRT">
                                                             <font key="font" metaFont="titleBar" size="12"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89y-ci-hy0">
-                                                        <rect key="frame" x="176" y="109" width="55" height="23"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="TqY-qh-j6q">
-                                                            <font key="font" metaFont="system" size="14"/>
-                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" white="0.94999998809999997" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </textFieldCell>
-                                                    </textField>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzJ-Gu-gmj">
-                                                        <rect key="frame" x="142" y="37" width="32" height="32"/>
+                                                        <rect key="frame" x="142" y="20" width="32" height="37"/>
                                                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="foreward_w" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XAg-MB-O3x">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7e-iY-vaV">
-                                                        <rect key="frame" x="192" y="37" width="32" height="32"/>
+                                                        <rect key="frame" x="201" y="20" width="32" height="37"/>
                                                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="gostarticon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zEm-eS-gAn">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89y-ci-hy0">
+                                                        <rect key="frame" x="178" y="107" width="55" height="23"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="TqY-qh-j6q">
+                                                            <font key="font" metaFont="system" size="14"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" white="0.94999998809999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </textFieldCell>
+                                                    </textField>
                                                 </subviews>
                                             </view>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -1364,6 +1303,10 @@
                                         <color key="backgroundColor" white="0.94999998809999997" alpha="1" colorSpace="calibratedWhite"/>
                                     </textFieldCell>
                                 </textField>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHC-zk-0Tu">
+                                    <rect key="frame" x="537" y="17" width="26" height="28"/>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Fcc-tX-5q7"/>
+                                </imageView>
                             </subviews>
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
