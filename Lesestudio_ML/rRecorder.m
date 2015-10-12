@@ -727,7 +727,8 @@ NSLog(@"awake I");
 
 - (void)viewDidLoad
 {
-   
+   NSLog(@"viewDidLoad");
+   return;
    [super viewDidLoad];
       NSLog(@"nibname: %@ window: %@",self.nibName, [[self.view window]description]);
    
