@@ -799,14 +799,14 @@
                         <tabViewItems>
                             <tabViewItem label="Tab" identifier="1" id="GaI-88-qEC">
                                 <view key="view" ambiguous="YES" id="NTR-P8-1p2">
-                                    <rect key="frame" x="10" y="33" width="580" height="230"/>
+                                    <rect key="frame" x="10" y="33" width="109" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0m-7C-OGK" customClass="rRahmen">
-                                            <rect key="frame" x="296" y="17" width="267" height="199"/>
+                                            <rect key="frame" x="296" y="-213" width="267" height="199"/>
                                         </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZvK-e7-DtX" customClass="rRahmen">
-                                            <rect key="frame" x="17" y="17" width="263" height="199"/>
+                                            <rect key="frame" x="17" y="-213" width="263" height="199"/>
                                         </customView>
                                     </subviews>
                                 </view>
@@ -861,11 +861,13 @@
                 <outlet property="Feld" destination="xhG-DN-QzP" id="tSM-ms-K2d"/>
                 <outlet property="Knopf" destination="daf-n6-uM8" id="sNa-Xy-0JZ"/>
                 <outlet property="ProjektFeld" destination="78J-Lz-fnQ" id="Drj-pc-x9O"/>
+                <outlet property="RecPlayFenster" destination="QvC-M9-y7g" id="uNa-S7-j13"/>
                 <outlet property="TimeoutFeld" destination="Kyt-KK-XsF" id="m9B-jC-Cdh"/>
                 <outlet property="playerrahmen" destination="R0m-7C-OGK" id="elo-z3-f17"/>
                 <outlet property="recorderrahmen" destination="ZvK-e7-DtX" id="uXR-GE-PcL"/>
                 <outlet property="titelfixcheck" destination="SHC-zk-0Tu" id="Xs3-MJ-uIe"/>
                 <outlet property="titelrahmen" destination="bCy-ht-2YB" id="ttU-Uo-dfK"/>
+                <outlet property="view" destination="EiT-Mj-1SZ" id="bIV-Ux-EOL"/>
             </connections>
         </viewController>
     </objects>

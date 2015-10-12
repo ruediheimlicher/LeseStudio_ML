@@ -87,8 +87,202 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
 
 - (id)initWithNibName:(NSString *)nibname bundle:(NSBundle *)bundlename
 {
-   //NSLog(@"init nibname: %@ ",self.nibName);
+   NSLog(@"init nibname: %@ ",self.nibName);
    self = [ super initWithNibName: nil bundle:nil];
+   
+   NSNotificationCenter * nc;
+   nc=[NSNotificationCenter defaultCenter];
+   [nc addObserver:self
+          selector:@selector(KeyNotifikationAktion:)
+              name:@"Pfeiltaste"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ZeilenNotifikationAktion:)
+              name:@"selektierteZeile"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(EnterKeyNotifikationAktion:)
+              name:@"EnterKey"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(BewertungNotifikationAktion:)
+              name:@"mitBewertung"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(NotenNotifikationAktion:)
+              name:@"mitNote"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(StartStatusNotifikationAktion:)
+              name:@"StartStatus"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(UmgebungAktion:)
+              name:@"Umgebung"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(VolumesAktion:)
+              name:@"VolumeWahl"
+            object:nil];
+   /*
+    [nc addObserver:self
+    selector:@selector(SettingsAktion:)
+    name:@"Settings"
+    object:nil];
+    */
+   [nc addObserver:self
+          selector:@selector(ProjektListeAktion:)
+              name:@"ProjektWahl"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(neuesProjektAktion:)
+              name:@"neuesProjekt"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(neuesProjektVomStartAktion:)
+              name:@"neuesProjektVomStart"
+            object:nil];
+   
+   
+   
+   [nc addObserver:self
+          selector:@selector(anderesProjektAktion:)
+              name:@"anderesProjekt"
+            object:nil];
+   
+   
+   [nc addObserver:self
+          selector:@selector(ProjektStartAktion:)
+              name:@"ProjektStart"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ProjektEntfernenAktion:)
+              name:@"ProjektEntfernen"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ProjektMenuAktion:)
+              name:@"ProjektMenu"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(savePListAktion:)
+              name:@"savePList"
+            object:nil];
+   
+   
+   
+   
+   [nc addObserver:self
+          selector:@selector(BeendenAktion:)
+              name:@"externbeenden"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(TitelListeAktion:)
+              name:@"titelliste"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(TimeoutAktion:)
+              name:@"timeout"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(SaveKommentarAktion:)
+              name:@"SaveKommentar"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(LevelmeterAktion:)
+              name:@"levelmeter"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(RecordingAktion:)
+              name:@"recording"
+            object:nil];
+   
+   
+   [nc addObserver:self
+          selector:@selector(AbspielPosAktion:)
+              name:@"abspielpos"
+            object:nil];
+   
+   
+   [nc addObserver:self
+          selector:@selector(ListeAktualisierenAktion:)
+              name:@"ListeAktualisieren"
+            object:nil];
+   
+   
+   [nc addObserver:self
+          selector:@selector(RecordingAktion2:)
+              name:@"AVCaptureSessionDidStartRunningNotification"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(AdminStartAktion:)
+              name:@"adminstart"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(NameIstEntferntAktion:)
+              name:@"NameIstEntfernt"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(NameIstEingesetztAktion:)
+              name:@"NameIstEingesetzt"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(AdminEntfernenNotificationAktion:)
+              name:@"adminentfernen"
+            object:nil];
+   
+   
+   
+   [nc addObserver:self
+          selector:@selector(CleanOptionNotificationAktion:)
+              name:@"CleanOption"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(CleanViewNotificationAktion:)
+              name:@"CleanView"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ExportNotificationAktion:)//Taste "Exportieren"
+              name:@"Export"
+            object:nil];
+   [nc addObserver:self
+          selector:@selector(ClearNotificationAktion:)//Taste "Löschen"
+              name:@"Clear"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(MarkierungNotificationAktion:)//Fenster Markierung
+              name:@"MarkierungOption"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ProjektExportNotificationAktion:)//Fenster ProjektExport
+              name:@"ProjektExportOption"
+            object:nil];
+
+
    return self;
 }
 
@@ -105,16 +299,314 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    NSBundle* LesestudioBundle = [NSBundle mainBundle];
    NSString* ResourcePfad = [[LesestudioBundle bundlePath]stringByAppendingPathComponent:@"Contents/Resources"];
    NSArray* mainarray = [[NSFileManager defaultManager]contentsOfDirectoryAtPath:ResourcePfad error:nil];
-   NSLog(@"mainarray: %@",mainarray);
+   //NSLog(@"mainarray: %@",mainarray);
    
-
+   // B
+   self.LeseboxDa=NO;
+   self.ArchivPlayerGeladen=NO;
+   
+   self.mitAdminPasswort=YES;
+   self.mitUserPasswort=YES;
+   self.AdminZugangOK=NO;
+   
+ //  [self.window setDelegate:self];
+   
+   //NSLog(@"NSAlertDefaultReturn: %d",NSAlertDefaultReturn);
+   
+   //NSLog(@"[NSDate date]: %@",[[NSDate date]description]); // 2015-09-12 17:15:21 +0000
+   //  //NSLog(@"[NSCalendarDate date]: %@",[[NSCalendarDate date]description]); // 2015-09-12 19:16:41 +0200
+   
+   
+   // http://stackoverflow.com/questions/1268509/convert-utc-nsdate-to-local-timezone-objective-c
+   localDate = [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];//  12.09.2015 19:20:26
+   //NSLog(@"localDate: %@",localDate);
+   heuteDatumString = [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];//  12.09.2015 19:20:26
+   //NSLog(@"heuteDatumString: %@",heuteDatumString);
+   
+   NSDate *currentDate = [NSDate date];
+   NSCalendar* calendar = [NSCalendar currentCalendar];
+   NSDateComponents* components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:currentDate]; // Get necessary date components
+   
+   long monat = [components month]; //gives you month
+   long tag = [components day]; //gives you day
+   long jahr = [components year]; // gives you year
+   
+   NSLog(@"tag: %ld monat: %ld jahr: %ld",tag,monat,jahr);
+   
+   // C
+   heuteTagDesJahres = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
+   
+   NSLog(@"heuteTagDesJahres: %ld ",heuteTagDesJahres);
+   
+   
+   
+   NSNotificationCenter * nc;
+   nc=[NSNotificationCenter defaultCenter];
+   [nc addObserver:self
+          selector:@selector(KeyNotifikationAktion:)
+              name:@"Pfeiltaste"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ZeilenNotifikationAktion:)
+              name:@"selektierteZeile"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(EnterKeyNotifikationAktion:)
+              name:@"EnterKey"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(BewertungNotifikationAktion:)
+              name:@"mitBewertung"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(NotenNotifikationAktion:)
+              name:@"mitNote"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(StartStatusNotifikationAktion:)
+              name:@"StartStatus"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(UmgebungAktion:)
+              name:@"Umgebung"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(VolumesAktion:)
+              name:@"VolumeWahl"
+            object:nil];
+   /*
+    [nc addObserver:self
+    selector:@selector(SettingsAktion:)
+    name:@"Settings"
+    object:nil];
+    */
+   [nc addObserver:self
+          selector:@selector(ProjektListeAktion:)
+              name:@"ProjektWahl"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(neuesProjektAktion:)
+              name:@"neuesProjekt"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(neuesProjektVomStartAktion:)
+              name:@"neuesProjektVomStart"
+            object:nil];
+   
+   
+   
+   [nc addObserver:self
+          selector:@selector(anderesProjektAktion:)
+              name:@"anderesProjekt"
+            object:nil];
+   
+   
+   [nc addObserver:self
+          selector:@selector(ProjektStartAktion:)
+              name:@"ProjektStart"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ProjektEntfernenAktion:)
+              name:@"ProjektEntfernen"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ProjektMenuAktion:)
+              name:@"ProjektMenu"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(savePListAktion:)
+              name:@"savePList"
+            object:nil];
+   
+   
+   
+   
+   [nc addObserver:self
+          selector:@selector(BeendenAktion:)
+              name:@"externbeenden"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(TitelListeAktion:)
+              name:@"titelliste"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(TimeoutAktion:)
+              name:@"timeout"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(SaveKommentarAktion:)
+              name:@"SaveKommentar"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(LevelmeterAktion:)
+              name:@"levelmeter"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(RecordingAktion:)
+              name:@"recording"
+            object:nil];
+   
+   
+   [nc addObserver:self
+          selector:@selector(AbspielPosAktion:)
+              name:@"abspielpos"
+            object:nil];
+   
+   
+   [nc addObserver:self
+          selector:@selector(ListeAktualisierenAktion:)
+              name:@"ListeAktualisieren"
+            object:nil];
+   
+   
+   [nc addObserver:self
+          selector:@selector(RecordingAktion2:)
+              name:@"AVCaptureSessionDidStartRunningNotification"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(AdminStartAktion:)
+              name:@"adminstart"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(NameIstEntferntAktion:)
+              name:@"NameIstEntfernt"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(NameIstEingesetztAktion:)
+              name:@"NameIstEingesetzt"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(AdminEntfernenNotificationAktion:)
+              name:@"adminentfernen"
+            object:nil];
+   
+   
+   
+   [nc addObserver:self
+          selector:@selector(CleanOptionNotificationAktion:)
+              name:@"CleanOption"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(CleanViewNotificationAktion:)
+              name:@"CleanView"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ExportNotificationAktion:)//Taste "Exportieren"
+              name:@"Export"
+            object:nil];
+   [nc addObserver:self
+          selector:@selector(ClearNotificationAktion:)//Taste "Löschen"
+              name:@"Clear"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(MarkierungNotificationAktion:)//Fenster Markierung
+              name:@"MarkierungOption"
+            object:nil];
+   
+   [nc addObserver:self
+          selector:@selector(ProjektExportNotificationAktion:)//Fenster ProjektExport
+              name:@"ProjektExportOption"
+            object:nil];
+   
+   
+//   NSArray* windowViewArray = [[self view] subviews];
+   
+   NSLog(@"awake A");
+   BOOL success = NO;
+   NSError *error;
+   Utils = [[rUtils alloc ]init];
+   NSLog(@"awake B");
+   self.ProjektArray = [[NSMutableArray alloc]initWithCapacity:0];
+   self.PListProjektArray = [[NSMutableArray alloc]initWithCapacity:0];
+   self.ProjektNamenArray = [[NSMutableArray alloc]initWithCapacity:0];
+   self.UserPasswortArray = [[NSMutableArray alloc]initWithCapacity:0];
+   self.AdminPasswortDic = [[NSMutableDictionary alloc]initWithCapacity:0];
+   
+   
+   NSString* lb=@"Lesebox";
+   NSString* cb=@"Anmerkungen";
+   NSString*HomeLeseboxPfad=[NSHomeDirectory() stringByAppendingFormat:@"%@%@",@"/Documents/",lb];
+   NSLog(@"awake cb: %@  Lesebox: %@ HomeLeseboxPfad: %@",cb,lb,HomeLeseboxPfad);
+   
+   NSString* locBeenden=@"Beenden";
+   NSColor* HintergrundFarbe=[NSColor colorWithDeviceRed: 150.0/255 green:249.0/255 blue:150.0/255 alpha:1.0];
+   
+   //NSColor* HintergrundFarbe=[NSColor colorWithDeviceRed:80.0/255.0 green:230.0/255.0 blue:140.0/255.0 alpha:1.0];
+   NSColor * TitelFarbe=[NSColor purpleColor];
+   NSFont* TitelFont;
+   TitelFont=[NSFont fontWithName:@"Helvetica" size: 36];
+   NSLog(@"awake C");
+   [[self TitelString]setFont:TitelFont];
+   [[self TitelString] setTextColor:TitelFarbe];
+   [[self ModusString] setFont:TitelFont];
+   [[self ModusString] setTextColor:TitelFarbe];
+   
+   //BOOL istOrdner;
+   //   [self.RecPlayFenster setDelegate:self];
+   //   [self.RecPlayFenster setBackgroundColor:HintergrundFarbe];
+   //  NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 194.0/255 green:249.0/255 blue:194.0/255 alpha:1.0];
+   NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 150.0/255 green:249.0/255 blue:150.0/255 alpha:1.0];
+   NSLog(@"awake D");
+   //  self.view.backgroundColor=FensterFarbe;
+   //[[self view]window].backgroundColor=FensterFarbe;
+   
+   // http://stackoverflow.com/questions/2962790/best-way-to-change-the-background-color-for-an-nsview
+ //  [self.view setWantsLayer:YES];
+ //  [self.RecPlayFenster  setBackgroundColor:FensterFarbe];
+   
+   
+   
+ //  [[self.view window ]setDelegate:self];
+   //	NSColor * TitelFarbe=[NSColor whiteColor];
+   TitelFont=[NSFont fontWithName:@"Helvetica" size: 36];
+   NSLog(@"awake E");
+   [self.TitelString setFont:TitelFont];
+   [self.TitelString setTextColor:TitelFarbe];
+   [self.ModusString setFont:TitelFont];
+   [self.ModusString setTextColor:TitelFarbe];
+   NSLog(@"awake F");
+   
+   NSImage* myImage = [NSImage imageNamed: @"MicroIcon"];
+   [NSApp setApplicationIconImage: myImage];
+   NSLog(@"awake G");
+// D
+   // +++++++++
+   // Menu-Akivierungen
+   
+   // +++++++++
+   
 }
 
 
 - (void)viewDidLoad
 {
+   
    [super viewDidLoad];
-      //NSLog(@"nibname: %@ window: %@",self.nibName, [[self.view window]description]);
+      NSLog(@"nibname: %@ window: %@",self.nibName, [[self.view window]description]);
    
 //
    //NSString *universal = @"Üniversäl";
@@ -160,14 +652,6 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    self.Aufnahmedauer=0;
    self.AufnahmeSaved=YES;
    
-   //   projekt=@"projekt";
-   //   projektpfad=@"projektpfad";
-   //   archivpfad=@"archivpfad";
-   //  leseboxpfad=@"leseboxpfad";
-   //  projektarray=@"projektarray";
-   //  OK=@"OK";
-   //   fix=@"fix";
-   //  mituserpw=@"mituserpw";
    
    RPDevicedaten=[NSMutableData dataWithCapacity:0];
    SystemDevicedaten=[NSMutableData dataWithCapacity:0];
@@ -200,11 +684,11 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    long tag = [components day]; //gives you day
    long jahr = [components year]; // gives you year
 
-   //NSLog(@"tag: %ld monat: %ld jahr: %ld",tag,monat,jahr);
+   NSLog(@"tag: %ld monat: %ld jahr: %ld",tag,monat,jahr);
    
    heuteTagDesJahres = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
 
-   //NSLog(@"heuteTagDesJahres: %ld ",heuteTagDesJahres);
+   NSLog(@"heuteTagDesJahres: %ld ",heuteTagDesJahres);
  
    
    
@@ -445,7 +929,7 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    
    // http://stackoverflow.com/questions/2962790/best-way-to-change-the-background-color-for-an-nsview
    [self.view setWantsLayer:YES];
-   [self.view.layer setBackgroundColor:[FensterFarbe CGColor]];
+   //[self.view.layer setBackgroundColor:[FensterFarbe CGColor]];
    
    
    
@@ -461,6 +945,8 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    NSImage* myImage = [NSImage imageNamed: @"MicroIcon"];
    [NSApp setApplicationIconImage: myImage];
    
+  
+   // D
    [self.AblaufMenu setDelegate:self];
   // self.ModusMenu = [[NSMenu alloc]initWithName:@"Modus"];
    [self.ModusMenu setDelegate:self];
@@ -638,7 +1124,7 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    //NSLog(@"viewArray0: %@",[viewArray0 description]);
    [Abspielanzeige setMax:abspielanzeigerect.size.width];
    [self.Fortschritt startAnimation:nil];
-   [self.RecPlayFenster setIsVisible:YES];
+//   [self.RecPlayFenster setIsVisible:YES];
    
    //[Leserfeld setBackgroundColor:[NSColor lightGrayColor]];
    //NSImage* StartRecordImg=[[NSImage alloc]initWithContentsOfFile:@"StartPlayImg.tif"];
@@ -3389,7 +3875,7 @@ QTMovie* qtMovie;
       return;
       
    }
-   [self.RecPlayFenster setIsVisible:YES];
+  // [self.RecPlayFenster setIsVisible:YES];
    self.Umgebung=0;
    
    [self setRecPlay];

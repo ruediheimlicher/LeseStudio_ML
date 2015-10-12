@@ -11,6 +11,8 @@
 @class rRecorder;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
-
+{
+   //IBOutlet NSWindow *window;
+}
 @end
 

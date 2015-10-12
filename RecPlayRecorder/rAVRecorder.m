@@ -56,7 +56,9 @@
 - (id)init
 {
    self = [super init];
-   if (self) {
+   if (self)
+   {
+      NSLog(@"AVRecorder start");
       // Create a capture session
       session = [[AVCaptureSession alloc] init];
       

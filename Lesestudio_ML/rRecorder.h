@@ -82,7 +82,7 @@
    
    //
    //Export
-   NSTimer*					CleanDelayTimer;
+   NSTimer*                CleanDelayTimer;
    
    NSString*					ExportOrdnerPfad;
    NSMutableData*				RPExportdaten;
@@ -149,7 +149,8 @@
 @property  (weak) IBOutlet NSComboBox *				TitelPop;
 @property  (weak) IBOutlet NSComboBox *				NeueTitelPop;
 
-@property  (weak) IBOutlet NSWindow*					RecPlayFenster;
+// http://www.cocoabuilder.com/archive/cocoa/327547-my-app-crash-on-10-7-5-but-works-on-10-8.html weak property in 10.7
+@property  (assign) IBOutlet NSWindow*					RecPlayFenster;
 @property  (weak) IBOutlet NSTabView*					RecPlayTab;
 @property  (weak) IBOutlet NSTextField *				Testfeld;
 @property  (weak) IBOutlet NSButton*					StartRecordKnopf;
