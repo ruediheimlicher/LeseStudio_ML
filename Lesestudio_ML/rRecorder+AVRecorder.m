@@ -215,10 +215,11 @@
    
    if ([AVRecorder isRecording])
 	  {
-        NSImage* StartRecordImg=[NSImage imageNamed:@"recordicon_k.gif"];     //
+        //NSImage* StartRecordImg=[NSImage imageNamed:@"recordicon_k.gif"];     //
        // [[self.StartStopKnopf cell]setImage:StartRecordImg];
         //self.StartStopKnopf.image=StartRecordImg;
-        [self.StartStopString setStringValue:@"START"];
+        self.StartStopKnopf.title = @"START";
+        //[self.StartStopString setStringValue:@"START"];
         [self stopAVRecord:sender];
         //[AVRecorder setRecording:NO];
         
@@ -228,7 +229,7 @@
      {
         // Namen checken
         [self startAVRecord:sender];
-        
+        self.StartStopKnopf.title = @"STOP";
         // Aufnahme starten
        // NSImage* StopRecordImg=[NSImage imageNamed:@"StopRecordImg.tif"];
        // self.StartStopKnopf.image = StopRecordImg;
@@ -294,7 +295,7 @@
    [AVAbspielplayer playAufnahme];
    float dur = ([AVAbspielplayer duration]);
    [Abspielanzeige setMax:dur];
-   //NSLog(@"+AVRecorder startAVPlay dur: %f",dur);
+   NSLog(@"+AVRecorder startAVPlay dur: %f",dur);
    [Abspielanzeige setNeedsDisplay:YES];
    [self.ArchivAbspielanzeige setMax:dur];
    

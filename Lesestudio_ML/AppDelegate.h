@@ -12,7 +12,8 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
 {
-   //IBOutlet NSWindow *window;
+   //
 }
+@property IBOutlet NSWindow *window;
 @end
 

@@ -720,14 +720,162 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    
 NSLog(@"awake I");
    
+   [self Aufnahmevorbereiten];
+   NSFont* Lesernamenfont;
+   Lesernamenfont=[NSFont fontWithName:@"Helvetica" size: 20];
+   NSColor * LesernamenFarbe=[NSColor whiteColor];
+   [self.Leserfeld setFont: Lesernamenfont];
+   [self.Leserfeld setTextColor: LesernamenFarbe];
    
+   NSRect f = Abspielanzeige.frame;
+   //NSLog(@"didLoad x: %f y: %f w:%f h:%f",f.origin.x,f.origin.y,f.size.width,f.size.height);
+   
+   
+   NSRect abspielanzeigerect = NSMakeRect(315,295,225,20);
+   Abspielanzeige = [[rAbspielanzeige alloc]initWithFrame:abspielanzeigerect];
+   
+   
+   
+   [[[self.RecPlayTab tabViewItemAtIndex:0] view]addSubview:Abspielanzeige];
+   
+   f = self.ArchivAbspielanzeige.frame;
+   self.ArchivAbspielanzeige = [[rAbspielanzeige alloc]initWithFrame:f];
+   
+   [[[self.RecPlayTab tabViewItemAtIndex:1] view]addSubview:self.ArchivAbspielanzeige];
+   
+   //   NSArray* viewArray0 = [[[self.RecPlayTab tabViewItemAtIndex:0]view]subviews];
+   //NSLog(@"viewArray0: %@",[viewArray0 description]);
+   [Abspielanzeige setMax:abspielanzeigerect.size.width];
+   [self.Fortschritt startAnimation:nil];
+   //   [self.RecPlayFenster setIsVisible:YES];
+   
+   //[Leserfeld setBackgroundColor:[NSColor lightGrayColor]];
+   //NSImage* StartRecordImg=[[NSImage alloc]initWithContentsOfFile:@"StartPlayImg.tif"];
+   
+   //   NSImage* StartRecordImg=[NSImage imageNamed:@"recordicon_w.gif"];
+   
+   //self.StartStopKnopf.image=StartRecordImg;
+   //[[self.StartStopKnopf cell]setImage:StartRecordImg];
+   
+   //   NSImage* StopRecordImg=[NSImage imageNamed:@"stopicon_w.gif"];
+   //   [[self.StopRecordKnopf cell]setImage:StopRecordImg];
+   
+   // NSImage* StartPlayImg=[NSImage imageNamed:@"StartPlayImg.tif"];
+   //   NSImage* StartPlayImg=[NSImage imageNamed:@"playicon.gif"];
+   //   [[self.StartPlayKnopf cell]setImage:StartPlayImg];
+   
+   
+   // [[self.ArchivPlayTaste cell]setImage:StartPlayImg];
+   //  NSImage* StopPlayImg=[NSImage imageNamed:@"StopPlayImg.tif"];
+   //[[self.StopPlayKnopf cell]setImage:StopPlayImg];
+   //[[self.ArchivStopTaste cell]setImage:StopPlayImg];
+   //   NSImage* BackImg=[NSImage imageNamed:@"Back.tif"];
+   //[[self.BackKnopf cell]setImage:BackImg];
+   //[[self.ArchivZumStartTaste cell]setImage:BackImg];
+   
+   
+   
+   [self.RecPlayTab setDelegate:self];
+   [self.RecPlayTab selectFirstTabViewItem:nil];
+   self.ArchivDaten=[[rArchivDS alloc]initWithRowCount:0];
+   [self.ArchivView setDelegate: self.ArchivDaten];
+   [self.ArchivView setDataSource: self.ArchivDaten];
+   //NSLog(@"setRecPlay:	mitUserPasswort: %d",mitUserPasswort);
+   if (self.mitUserPasswort)
+   {
+      [self.PWFeld setStringValue:@"Mit Passwort"];
+   }
+   else
+   {
+      [self.PWFeld setStringValue:@"Ohne Passwort"];
+   }
+   //NSLog(@"TimeoutDelay: %f",self.TimeoutDelay);
+   //self.TimeoutDelay=40.0;
+   self.AdminTimeoutDelay = 40.0;
+   //Tooltips
+   
+   [self.StartStopKnopf setToolTip:@"Aufnahme beginnen\nEine schon vorhandene ungesicherte Aufnahme wird überschrieben"];
+   [self.StopRecordKnopf setToolTip:@"Aufnahme beenden"];
+   [self.StartPlayKnopf setToolTip:@"Wiedergabe beginnen"];
+   [self.BackKnopf setToolTip:@"Zurück an den Anfang"];
+   [self.StopPlayKnopf setToolTip:@"Wiedergabe anhalten"];
+   [self.RewindKnopf setToolTip:@"3 Sekunden zurück"];
+   [self.ForewardKnopf setToolTip:@"3 Sekunden vorwärts"];
+   [self.SichernKnopf setToolTip:@"Aufnahme sichern.\nDie Aufnahme wird in der Lesebox gesichert."];
+   [self.LogoutKnopf setToolTip:@"Abmelden des aktuellen Lesers."];
+   //[[RecPlayTab tabViewItemAtIndex:1]setToolTip:@"Archiv von bisherigen Aufnahmen."];
+   [self.ArchivInListeTaste setToolTip:@"Aktuelle Aufnahme in die Liste zurücklegen"];
+   [self.ArchivInPlayerTaste setToolTip:@"Ausgewählte Aufnahme in den Player verschieben."];
+   [self.UserMarkCheckbox setToolTip:@"Diese Aufnahme markieren."];
+   [self.ArchivPlayTaste setToolTip:@"Wiedergabe beginnen"];
+   [self.ArchivZumStartTaste setToolTip:@"Zurück an den Anfang"];
+   [self.ArchivStopTaste setToolTip:@"Wiedergabe anhalten"];
+   [self.TitelPop setToolTip:@"Nach dem Login:\n˙Titel der letzten Aufnahme.\nDarunter: Liste der vorhandenen Titel"];
+   [self.ArchivnamenPop setToolTip:@"Liste der Namen im aktuellen Projekt."];
+   [self.Leserfeld setToolTip:@"Nach dem Login:\nAktueller Leser"];
+   [self.ProjektFeld setToolTip:@"Aktuelles Projekt\nEin anderes Projekt kann im Menü Recorder ausgewählt werden."];
+   //   [[self.ModusMenu itemWithTag:kAdminTag]setToolTip:@"Hallo"];
+   //   [[self.ModusMenu itemWithTag:kRecPlayTag]setToolTip:@"Hallo"];
+   //   [[self.ModusMenu itemWithTag:kKommentarTag]setToolTip:@"Hallo"];
+   [[self.AblaufMenu itemWithTag:kEinstellungenTag]setToolTip:@"Hallo"];
+   int i=[[[NSUserDefaults standardUserDefaults]objectForKey:@"Wert1"]intValue];
+   //NSLog(@"Test Wert1: %d",i);
+   //i--;
+   
+   NSTimer* KontrollTimer=[NSTimer scheduledTimerWithTimeInterval:0.5
+                                                           target:self
+                                                         selector:@selector(KontrollTimerfunktion:)
+                                                         userInfo:nil
+                                                          repeats:YES];
+   
+   [self.TimeoutFeld setIntValue:self.TimeoutDelay];
+   // AVRecorder
+   
+   if (!(AVRecorder))
+   {
+      AVRecorder = [[rAVRecorder alloc]init];
+   }
+   if (AVRecorder)
+   {
+      AVRecorder.RecorderFenster = [self.view window];
+      //   [AVRecorder setRecording:YES];
+      // if AVRecorder
+      AufnahmeZeit=0;
+      [AVRecorder setstartzeit:startzeit];
+   }
+   
+   if (!(AVAbspielplayer))
+   {
+      AVAbspielplayer = [[rAVPlayer alloc]init];
+   }
+   if (AVAbspielplayer)
+   {
+      AVAbspielplayer.PlayerFenster = [self.view window];
+   }
+   
+   
+   //self.view.window = [[NSWindow alloc]initWithFrame:[self.view bounds] stylemask:NSBorderlessWindowMask];
+   [self.RecPlayFenster setBackgroundColor:FensterFarbe];
+
+   [self.view.window setIsVisible:YES];
+   [self.view.window makeFirstResponder:nil];
+   
+   //NSLog(@"end nibname: %@ window: %@",self.nibName, [[self.view window]description]);
+   
+   
+   if (startcode)
+   {
+      //  [self beginAdminPlayer:nil];
+   }
+
    NSLog(@"awake K");
+   // Menu-Target-Teil nicht von viewDidLoad uebernommen
 }
 
 
 - (void)viewDidLoad
 {
-   NSLog(@"viewDidLoad");
+   //NSLog(@"viewDidLoad");
    return;
    [super viewDidLoad];
       NSLog(@"nibname: %@ window: %@",self.nibName, [[self.view window]description]);
@@ -1048,12 +1196,13 @@ NSLog(@"awake I");
  //  NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 194.0/255 green:249.0/255 blue:194.0/255 alpha:1.0];
    NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 150.0/255 green:249.0/255 blue:150.0/255 alpha:1.0];
 
-   //  self.view.backgroundColor=FensterFarbe;
+     //self.view.backgroundColor=FensterFarbe;
    //[[self view]window].backgroundColor=FensterFarbe;
+   [self.RecPlayFenster setBackgroundColor:FensterFarbe];
    
    // http://stackoverflow.com/questions/2962790/best-way-to-change-the-background-color-for-an-nsview
-   [self.view setWantsLayer:YES];
-   //[self.view.layer setBackgroundColor:[FensterFarbe CGColor]];
+  // [self.view setWantsLayer:YES];
+  // [self.view.layer setBackgroundColor:[FensterFarbe CGColor]];
    
    
    
@@ -1371,6 +1520,8 @@ NSLog(@"awake I");
    {
     //  [self beginAdminPlayer:nil];
    }
+ 
+   // K
    NSMenu *mainMenu = [[NSApplication sharedApplication] mainMenu];
    
    NSMenu *modusMenu = [[mainMenu itemWithTitle:@"Modus"] submenu];

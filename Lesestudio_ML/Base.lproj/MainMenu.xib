@@ -740,7 +740,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="638" height="695"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="638" height="695"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -776,7 +776,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Recorder" identifier="1" id="gme-HZ-13g">
-                                <view key="view" id="PHG-Kp-9jq">
+                                <view key="view" ambiguous="YES" id="PHG-Kp-9jq">
                                     <rect key="frame" x="10" y="33" width="572" height="342"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -834,12 +834,12 @@
                                                     </customView>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVl-pR-IQw">
                                                         <rect key="frame" x="17" y="20" width="36" height="36"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="playicon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ffy-wV-f25">
+                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="playicon_w" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ffy-wV-f25">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="startAVPlay:" target="fVs-b7-6wq" id="aQ6-xp-HLV"/>
+                                                            <action selector="startAVPlay:" target="fVs-b7-6wq" id="mBU-mw-bpz"/>
                                                         </connections>
                                                     </button>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05U-uE-EUn">
@@ -878,7 +878,7 @@
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7N-Mx-3yL">
                                                         <rect key="frame" x="102" y="20" width="36" height="36"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="halticon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aEI-Mq-gw4">
+                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="halticon_w" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aEI-Mq-gw4">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -906,7 +906,7 @@
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7e-iY-vaV">
                                                         <rect key="frame" x="201" y="20" width="36" height="36"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="gostarticon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zEm-eS-gAn">
+                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="gostarticon_w" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zEm-eS-gAn">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -1007,7 +1007,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Archiv" identifier="2" id="FnH-o0-Xfp">
-                                <view key="view" ambiguous="YES" id="hJL-Uc-uyE">
+                                <view key="view" id="hJL-Uc-uyE">
                                     <rect key="frame" x="10" y="33" width="572" height="342"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1484,9 +1484,12 @@
     <resources>
         <image name="foreward_w" width="101" height="102"/>
         <image name="gostarticon" width="101" height="103"/>
+        <image name="gostarticon_w" width="101" height="101"/>
         <image name="halticon" width="101" height="102"/>
+        <image name="halticon_w" width="101" height="102"/>
         <image name="mikrofonicon_w" width="938" height="938"/>
         <image name="playicon" width="101" height="102"/>
+        <image name="playicon_w" width="101" height="102"/>
         <image name="rewindicon" width="101" height="102"/>
     </resources>
 </document>

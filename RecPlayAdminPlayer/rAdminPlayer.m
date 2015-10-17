@@ -2282,7 +2282,7 @@ const short kRecPlayUmgebung=0;
 
 - (IBAction)startAVPlay:(id)sender
 {
-   //NSLog(@"startAVPlay URL: %@",[AVAbspielplayer AufnahmeURL]);
+   NSLog(@"startAVPlay URL: %@",[AVAbspielplayer AufnahmeURL]);
    // [AVRecorder setPlaying:YES];
    [self.BackKnopf setEnabled:YES];
    [self.StopPlayKnopf setEnabled:YES];
@@ -2294,7 +2294,7 @@ const short kRecPlayUmgebung=0;
    [AVAbspielplayer playAdminAufnahme];
    float dur = ([AVAbspielplayer duration]);
    [Abspielanzeige setMax:dur];
-   //NSLog(@"AdminPlayer startAVPlay dur: %f",dur);
+   NSLog(@"AdminPlayer startAVPlay dur: %f",dur);
    [Abspielanzeige setNeedsDisplay:YES];
    //[self.Fortschritt setDoubleValue:0];
    [self invalTimer];
@@ -2305,8 +2305,8 @@ const short kRecPlayUmgebung=0;
                                            userInfo:nil
                                             repeats:YES];
    
-   //NSRunLoop* runloop = [NSRunLoop currentRunLoop];
-//   [runloop addTimer:posTimer forMode:NSRunLoopCommonModes];
+   NSRunLoop* runloop = [NSRunLoop currentRunLoop];
+   [runloop addTimer:posTimer forMode:NSRunLoopCommonModes];
  
 }
 

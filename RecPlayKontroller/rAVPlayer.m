@@ -187,7 +187,7 @@
  
    if (haltzeit)
    {
-      //NSLog(@"playAufnahme nach halt: %2.2f",haltzeit);
+      NSLog(@"playAufnahme nach halt: %2.2f",haltzeit);
       AVAbspielplayer.currentTime = haltzeit;
       [AVAbspielplayer play];
    }
