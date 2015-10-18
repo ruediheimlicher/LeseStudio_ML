@@ -2291,7 +2291,7 @@ QTMovie* qtMovie;
 - (IBAction)startPlay:(id)sender
 {
    //NSLog(@"startPlay");
-   if([self isRecording])
+   if([self istRecording])
    {
       NSBeep();
       return;
