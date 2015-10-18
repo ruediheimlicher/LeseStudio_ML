@@ -12,7 +12,6 @@
                 <outlet property="AbspieldauerFeld" destination="scX-Yc-Ux4" id="fqm-i8-kWI"/>
                 <outlet property="AdminBewertungfeld" destination="h4B-tV-BHj" id="Oc4-AX-wN3"/>
                 <outlet property="AdminDatumfeld" destination="WeC-dY-y2R" id="lY9-tC-TL6"/>
-                <outlet property="AdminFenster" destination="QvC-M9-y7g" id="Jhd-LK-XGZ"/>
                 <outlet property="AdminKommentarView" destination="nBd-ww-hlt" id="4Ht-mU-DBZ"/>
                 <outlet property="AdminMarkCheckbox" destination="VZ5-gj-AiH" id="Ll5-nb-QeR"/>
                 <outlet property="AdminNamenfeld" destination="Ssi-6S-WvC" id="wD7-Kq-aVs"/>
@@ -48,7 +47,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="574" height="801"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="574" height="801"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -223,7 +222,7 @@
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                                             </tableHeaderCell>
-                                                                            <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="E8EACE7E-3878-49AE-9082-9A1654C87E37" id="FhE-g2-vUA"/>
+                                                                            <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="870CEBE3-46C4-4663-ADD9-173924166A6F" id="FhE-g2-vUA"/>
                                                                         </tableColumn>
                                                                         <tableColumn identifier="aufnahme" editable="NO" width="272.51123046875" minWidth="40" maxWidth="1000" id="mPM-EI-2SR">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Aufnahme">
@@ -700,7 +699,7 @@
         </window>
     </objects>
     <resources>
-        <image name="E8EACE7E-3878-49AE-9082-9A1654C87E37" width="17" height="17">
+        <image name="870CEBE3-46C4-4663-ADD9-173924166A6F" width="17" height="17">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
