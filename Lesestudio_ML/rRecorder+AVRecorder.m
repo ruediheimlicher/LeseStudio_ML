@@ -56,7 +56,7 @@
 
 - (IBAction)startAVRecord:(id)sender
 {
-   if ([AVRecorder isRecording])
+   if ([AVRecorder istRecording])
    {
       //NSLog(@"ViewController Aufnahme in Gang");
       return;
@@ -200,9 +200,9 @@
    
 }
 
-- (BOOL)isRecording
+- (BOOL)istRecording
 {
-   return [AVRecorder isRecording];//([mCaptureMovieFileOutput outputFileURL] != nil);
+   return [AVRecorder istRecording];//([mCaptureMovieFileOutput outputFileURL] != nil);
 }
 
 #pragma mark startAVStop
@@ -213,7 +213,7 @@
    NSImage* StartRecordImg=[NSImage imageNamed:@"recordicon_k.gif"];//
    
    
-   if ([AVRecorder isRecording])
+   if ([AVRecorder istRecording])
 	  {
         //NSImage* StartRecordImg=[NSImage imageNamed:@"recordicon_k.gif"];     //
        // [[self.StartStopKnopf cell]setImage:StartRecordImg];
@@ -453,7 +453,7 @@
       [self updateAudioLevels:Level];
       
    }
-   if ([[note userInfo]objectForKey:@"duration"] && [self isRecording])
+   if ([[note userInfo]objectForKey:@"duration"] && [self istRecording])
    {
       NSNumber* durationNumber=[[note userInfo]objectForKey:@"duration"];
       AufnahmeZeit=[durationNumber intValue];

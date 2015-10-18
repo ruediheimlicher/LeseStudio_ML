@@ -389,7 +389,7 @@
 - (IBAction)startAVRecord:(id)sender;
 - (IBAction)stopAVRecord:(id)sender;
 - (IBAction)startAVStop:(id)sender;
-- (BOOL)isRecording;
+- (BOOL)istRecording;
 //- (void)updateAudioLevels:(float)level;
 - (void)RecordingAktion:(NSNotification*)note;
 - (void)LevelmeterAktion:(NSNotification*)note;

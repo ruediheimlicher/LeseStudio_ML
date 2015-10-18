@@ -776,7 +776,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Recorder" identifier="1" id="gme-HZ-13g">
-                                <view key="view" ambiguous="YES" id="PHG-Kp-9jq">
+                                <view key="view" id="PHG-Kp-9jq">
                                     <rect key="frame" x="10" y="33" width="572" height="342"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1007,7 +1007,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Archiv" identifier="2" id="FnH-o0-Xfp">
-                                <view key="view" id="hJL-Uc-uyE">
+                                <view key="view" ambiguous="YES" id="hJL-Uc-uyE">
                                     <rect key="frame" x="10" y="33" width="572" height="342"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1105,14 +1105,14 @@
                                                     </textField>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mxs-eZ-5vY">
                                                         <rect key="frame" x="13" y="26" width="32" height="32"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="playicon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f3r-gg-AMa">
+                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="playicon_w" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f3r-gg-AMa">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gkg-iB-oPA">
                                                         <rect key="frame" x="176" y="26" width="32" height="32"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="gostarticon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yuc-Ur-JIi">
+                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="gostarticon_w" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yuc-Ur-JIi">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -1152,7 +1152,7 @@
                                                     </textField>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-nc-OjQ">
                                                         <rect key="frame" x="92" y="26" width="32" height="32"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="halticon" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4os-7f-G8X">
+                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="halticon_w" imagePosition="only" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4os-7f-G8X">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -1483,12 +1483,9 @@
     </objects>
     <resources>
         <image name="foreward_w" width="101" height="102"/>
-        <image name="gostarticon" width="101" height="103"/>
         <image name="gostarticon_w" width="101" height="101"/>
-        <image name="halticon" width="101" height="102"/>
         <image name="halticon_w" width="101" height="102"/>
         <image name="mikrofonicon_w" width="938" height="938"/>
-        <image name="playicon" width="101" height="102"/>
         <image name="playicon_w" width="101" height="102"/>
         <image name="rewindicon" width="101" height="102"/>
     </resources>

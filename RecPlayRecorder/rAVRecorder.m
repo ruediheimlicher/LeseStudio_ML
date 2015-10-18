@@ -64,7 +64,7 @@
       
       // Attach preview to session
       CALayer *previewViewLayer = [[self previewView] layer];
-      [previewViewLayer setBackgroundColor:CGColorGetConstantColor(kCGColorBlack)];
+      //[previewViewLayer setBackgroundColor:CGColorGetConstantColor(kCGColorBlack)];
       AVCaptureVideoPreviewLayer *newPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:[self session]];
       [newPreviewLayer setFrame:[previewViewLayer bounds]];
       [newPreviewLayer setAutoresizingMask:kCALayerWidthSizable | kCALayerHeightSizable];
@@ -85,8 +85,8 @@
                                                                  queue:[NSOperationQueue mainQueue]
                                                             usingBlock:^(NSNotification *note) {
                                                                dispatch_async(dispatch_get_main_queue(), ^(void) {
-                                                                  //NSLog(@"AVCaptureSessionRuntimeErrorNotification");
-                                                                 // [[[self view] window] presentError:[[note userInfo] objectForKey:AVCaptureSessionErrorKey]];
+                                                                  NSLog(@"AVCaptureSessionRuntimeErrorNotification");
+                                                                  //[[[self view] window] presentError:[[note userInfo] objectForKey:AVCaptureSessionErrorKey]];
                                                                });
                                                             }];
       id didStartRunningObserver = [notificationCenter addObserverForName:AVCaptureSessionDidStartRunningNotification
@@ -194,7 +194,8 @@
    
    [[self session] beginConfiguration];
    
-   if ([self videoDeviceInput]) {
+   if ([self videoDeviceInput])
+   {
       // Remove the old device input from the session
       [session removeInput:[self videoDeviceInput]];
       [self setVideoDeviceInput:nil];
@@ -206,22 +207,32 @@
       
       // Create a device input for the device and add it to the session
       AVCaptureDeviceInput *newVideoDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:selectedVideoDevice error:&error];
-      if (newVideoDeviceInput == nil) {
-         dispatch_async(dispatch_get_main_queue(), ^(void) {
+      if (newVideoDeviceInput == nil)
+      {
+         dispatch_async(dispatch_get_main_queue(), ^(void)
+         {
             //NSLog(@"newVideoDeviceInput nil");
          });
-      } else {
+      }
+      else
+      {
          if (![selectedVideoDevice supportsAVCaptureSessionPreset:[session sessionPreset]])
+         {
             [[self session] setSessionPreset:AVCaptureSessionPresetMedium];
+         }
          
          [[self session] addInput:newVideoDeviceInput];
          [self setVideoDeviceInput:newVideoDeviceInput];
       }
    }
-   [[self session] setSessionPreset:AVCaptureSessionPresetHigh];
+   //[[self session] setSessionPreset:AVCaptureSessionPresetHigh];
+   
+   [[self session] setSessionPreset:AVCaptureSessionPresetMedium];
    // If this video device also provides audio, don't use another audio device
    if ([self selectedVideoDeviceProvidesAudio])
+   {
       [self setSelectedAudioDevice:nil];
+   }
    
    [[self session] commitConfiguration];
 }
@@ -248,16 +259,20 @@
       
       // Create a device input for the device and add it to the session
       AVCaptureDeviceInput *newAudioDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:selectedAudioDevice error:&error];
-      if (newAudioDeviceInput == nil) {
-         dispatch_async(dispatch_get_main_queue(), ^(void) {
+      if (newAudioDeviceInput == nil)
+      {
+         dispatch_async(dispatch_get_main_queue(), ^(void)
+         {
             [NSApp presentError:error];
          });
       }
       else
       {
          if (![selectedAudioDevice supportsAVCaptureSessionPreset:[session sessionPreset]])
-            [[self session] setSessionPreset:AVCaptureSessionPresetHigh];
-         
+         {
+            [[self session] setSessionPreset:AVCaptureSessionPresetMedium];
+            //[[self session] setSessionPreset:AVCaptureSessionPresetHigh];
+         }
          [[self session] addInput:newAudioDeviceInput];
          [self setAudioDeviceInput:newAudioDeviceInput];
       }
@@ -292,10 +307,13 @@
 {
    NSError *error = nil;
    AVCaptureDevice *videoDevice = [self selectedVideoDevice];
-   if ([videoDevice lockForConfiguration:&error]) {
+   if ([videoDevice lockForConfiguration:&error])
+   {
       [videoDevice setActiveFormat:deviceFormat];
       [videoDevice unlockForConfiguration];
-   } else {
+   }
+   else
+   {
       dispatch_async(dispatch_get_main_queue(), ^(void) {
          [NSApp presentError:error];
       });
@@ -316,10 +334,13 @@
 {
    NSError *error = nil;
    AVCaptureDevice *audioDevice = [self selectedAudioDevice];
-   if ([audioDevice lockForConfiguration:&error]) {
+   if ([audioDevice lockForConfiguration:&error])
+   {
       [audioDevice setActiveFormat:deviceFormat];
       [audioDevice unlockForConfiguration];
-   } else {
+   }
+   else
+   {
       dispatch_async(dispatch_get_main_queue(), ^(void) {
          [NSApp presentError:error];
       });
@@ -391,7 +412,7 @@
    return [NSSet setWithObject:@"movieFileOutput.recording"];
 }
 
-- (BOOL)isRecording
+- (BOOL)istRecording
 {
    return [[self movieFileOutput] isRecording];
 }
@@ -405,9 +426,9 @@
    LeserPfad = leserpfad;
    if (record)
    {
-      if ([self isRecording])
+      if ([self istRecording])
       {
-         //NSLog(@"isRecording");
+         //NSLog(@"istRecording");
          return;
          
       }
@@ -831,10 +852,11 @@ NSError *error = nil;
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didStartRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray *)connections
 {
    NSDate *now = [[NSDate alloc] init];
-   long t3 = now.timeIntervalSince1970/1000000 - startzeit;
+   //long t3 = now.timeIntervalSince1970/1000000 - startzeit;
    //NSLog(@"setRecording t3: %ld",t3);
 
-   //NSLog(@"Did start recording to %@", [fileURL description]);
+   NSLog(@"Did start recording to %@", [fileURL description]);
+   NSLog(@"Did start recording connections%@", [connections description]);
   
    NSNotificationCenter * nc=[NSNotificationCenter defaultCenter];
    [nc postNotificationName:@"recording" object:self userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"record"]];

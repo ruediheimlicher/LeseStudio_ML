@@ -69,7 +69,7 @@
 @property (retain) AVCaptureSession *session;
 @property (readonly) NSArray *availableSessionPresets;
 @property (readonly) BOOL hasRecordingDevice;
-@property (assign,getter=isRecording) BOOL recording;
+@property (assign,getter=isRecording)        BOOL recording;
 
 #pragma mark - Preview
 @property (assign) IBOutlet NSView *previewView;
@@ -78,12 +78,12 @@
 @property (weak) NSNumber* AudioLevel;
 
 #pragma mark - Transport Controls
-@property (readonly,getter=isPlaying) BOOL playing;
-@property (readonly,getter=isRewinding) BOOL rewinding;
+@property (readonly,getter=isPlaying)        BOOL playing;
+@property (readonly,getter=isRewinding)      BOOL rewinding;
 @property (readonly,getter=isFastForwarding) BOOL fastForwarding;
 
-@property NSString*     LeserPfad;
-@property  NSString*                   hiddenAufnahmePfad;
+@property NSString*                          LeserPfad;
+@property  NSString*                         hiddenAufnahmePfad;
 
 // Methods
 - (IBAction)stop:(id)sender;
@@ -98,4 +98,5 @@
 - (void)setPlaying:(BOOL)play;
 - (void)setURL:(NSURL*)playerURL;
 - (void)setRecording:(BOOL)record mitLeserPfad:(NSString*)leserpfad;
+- (BOOL)istRecording;
 @end
