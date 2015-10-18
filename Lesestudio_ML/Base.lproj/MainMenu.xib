@@ -740,7 +740,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="638" height="695"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="638" height="695"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -776,12 +776,12 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Recorder" identifier="1" id="gme-HZ-13g">
-                                <view key="view" id="PHG-Kp-9jq">
-                                    <rect key="frame" x="10" y="33" width="572" height="342"/>
+                                <view key="view" ambiguous="YES" id="PHG-Kp-9jq">
+                                    <rect key="frame" x="10" y="33" width="141" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" boxType="secondary" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="UuJ-V9-CHf">
-                                            <rect key="frame" x="13" y="157" width="268" height="174"/>
+                                            <rect key="frame" x="13" y="-185" width="268" height="174"/>
                                             <view key="contentView" id="UDm-v8-dcb">
                                                 <rect key="frame" x="0.0" y="0.0" width="268" height="174"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -824,7 +824,7 @@
                                             <color key="fillColor" red="0.35386513069999997" green="0.37811753300000001" blue="0.97377848759999996" alpha="0.0" colorSpace="calibratedRGB"/>
                                         </box>
                                         <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="d0R-5A-Pvd">
-                                            <rect key="frame" x="298" y="157" width="255" height="174"/>
+                                            <rect key="frame" x="298" y="-185" width="255" height="174"/>
                                             <view key="contentView" id="FcW-AY-0TH">
                                                 <rect key="frame" x="1" y="1" width="253" height="172"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -928,7 +928,7 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="nET-Fi-Voj">
-                                            <rect key="frame" x="16" y="115" width="336" height="32"/>
+                                            <rect key="frame" x="16" y="-227" width="336" height="32"/>
                                             <buttonCell key="cell" type="squareTextured" title="Aufnahme sichern" bezelStyle="texturedSquare" alignment="center" enabled="NO" borderStyle="border" inset="2" id="aKV-Vc-9X6">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="18"/>
@@ -940,7 +940,7 @@
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aji-sf-5OL">
-                                            <rect key="frame" x="376" y="115" width="74" height="32"/>
+                                            <rect key="frame" x="376" y="-227" width="74" height="32"/>
                                             <buttonCell key="cell" type="squareTextured" title="+" bezelStyle="texturedSquare" alignment="center" enabled="NO" borderStyle="border" inset="2" id="956-Ux-1xd">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="19"/>
@@ -949,7 +949,7 @@
                                             </buttonCell>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="cy6-uH-Bui">
-                                            <rect key="frame" x="461" y="115" width="89" height="32"/>
+                                            <rect key="frame" x="461" y="-227" width="89" height="32"/>
                                             <buttonCell key="cell" type="squareTextured" title="Logout" bezelStyle="texturedSquare" alignment="center" enabled="NO" borderStyle="border" inset="2" id="yWH-iF-qwl">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="19"/>
@@ -961,7 +961,7 @@
                                             </connections>
                                         </button>
                                         <box fixedFrame="YES" title="Anmerkungen zur letzten Aufnahme" translatesAutoresizingMaskIntoConstraints="NO" id="0nU-xq-1wU">
-                                            <rect key="frame" x="13" y="12" width="539" height="96"/>
+                                            <rect key="frame" x="13" y="-330" width="539" height="96"/>
                                             <view key="contentView" id="E3P-81-bDr">
                                                 <rect key="frame" x="2" y="2" width="535" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1007,7 +1007,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Archiv" identifier="2" id="FnH-o0-Xfp">
-                                <view key="view" ambiguous="YES" id="hJL-Uc-uyE">
+                                <view key="view" id="hJL-Uc-uyE">
                                     <rect key="frame" x="10" y="33" width="572" height="342"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1053,7 +1053,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="5vu-9R-i62">
-                                                            <rect key="frame" x="504" y="17" width="15" height="58"/>
+                                                            <rect key="frame" x="1" y="17" width="15" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <tableHeaderView key="headerView" id="JnT-I8-5TG">
@@ -1193,7 +1193,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="tz5-pO-qCQ">
-                                                            <rect key="frame" x="266" y="1" width="15" height="54"/>
+                                                            <rect key="frame" x="1" y="1" width="15" height="0.0"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
