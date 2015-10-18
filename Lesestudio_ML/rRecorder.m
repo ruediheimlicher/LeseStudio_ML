@@ -6530,7 +6530,8 @@ if (!self.KommentarFenster)
 
 - (void)windowWillClose:(NSNotification *)notification
 {
-   //NSLog(@"windowWillClose: %@",notification);
+   NSLog(@"Recorder windowWillClose: %@",notification);
+   
 }
 
 

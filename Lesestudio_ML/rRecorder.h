@@ -37,7 +37,7 @@
 
 
 
-@interface rRecorder : NSViewController <NSTabViewDelegate, NSWindowDelegate, NSMenuDelegate, NSMenuDelegate>
+@interface rRecorder : NSViewController <NSTabViewDelegate, NSWindowDelegate, NSMenuDelegate>
 
 {
    // Panels
@@ -66,32 +66,32 @@
    NSMutableData*						SystemDevicedaten;
 
    //   NSTimer* AufnahmeTimer;
-   NSTimer* WiedergabeTimer;
-   int      AufnahmeZeit;
-   int      WiedergabeZeit;
-   NSTimer *AufnahmeTimer;
-   int aufnahmetimerstatus;
-   double startzeit;
-   NSTimer *      AdminTimer;
-   int AdminTimerCounter;
+   NSTimer*                      WiedergabeTimer;
+   int                           AufnahmeZeit;
+   int                           WiedergabeZeit;
+   NSTimer *                     AufnahmeTimer;
+   int                           aufnahmetimerstatus;
+   double                        startzeit;
+   NSTimer *                     AdminTimer;
+   int                           AdminTimerCounter;
    
     int                          startcode; // 0: recorder 1: AdminPlayer
    NSString*                     localDate;
    NSString*                     heuteDatumString;
-   long                        heuteTagDesJahres;
+   long                          heuteTagDesJahres;
    
    //
    //Export
-   NSTimer*                CleanDelayTimer;
+   NSTimer*                      CleanDelayTimer;
    
-   NSString*					ExportOrdnerPfad;
-   NSMutableData*				RPExportdaten;
-   OSType						exportFormatFlag;
-   NSMutableString*			ExportFormatString;
-   FSSpec						UserExportSpec;
-   long                    UserExportParID;
+   NSString*                     ExportOrdnerPfad;
+   NSMutableData*                RPExportdaten;
+   OSType                        exportFormatFlag;
+   NSMutableString*              ExportFormatString;
+   FSSpec                        UserExportSpec;
+   long                          UserExportParID;
 
-   int nurTitelZuNamenOption;
+   int                           nurTitelZuNamenOption;
    
     IBOutlet rRahmen* titelrahmen;
    IBOutlet rRahmen* recorderrahmen;

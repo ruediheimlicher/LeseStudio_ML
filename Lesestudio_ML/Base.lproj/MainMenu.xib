@@ -722,13 +722,20 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Help" id="wpr-3q-Mcd">
+                <menuItem title="Recorder" id="wpr-3q-Mcd">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                    <menu key="submenu" title="Recorder" id="B2s-uk-aFb">
                         <items>
-                            <menuItem title="Lesestudio_ML Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="neue Session" id="sXc-o8-LdI">
+                                <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
+                                    <action selector="neueSession:" target="fVs-b7-6wq" id="lT3-Gh-saN"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Session aktualisieren" id="snz-eQ-qPi">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="LeserListeAktualisieren:" target="fVs-b7-6wq" id="j9H-EL-bRa"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -1432,6 +1439,9 @@
                     </popUpButton>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="delegate" destination="fVs-b7-6wq" id="FiO-rk-ohB"/>
+            </connections>
             <point key="canvasLocation" x="428" y="707.5"/>
         </window>
         <viewController id="fVs-b7-6wq" customClass="rRecorder">

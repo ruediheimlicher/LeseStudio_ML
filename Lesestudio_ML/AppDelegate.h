@@ -14,6 +14,6 @@
 {
    //
 }
-@property IBOutlet NSWindow *window;
+//@property IBOutlet NSWindow *window;
 @end
 

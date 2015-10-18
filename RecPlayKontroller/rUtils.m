@@ -131,16 +131,13 @@ extern NSString* OK;//=@"OK";
 
 }
 
-
-
-
 - (void)UtilsNotificationAktion:(NSNotification*)note
 {
 /*
 Setzt die Variablen in Utils.m nach den Vorgaben der PList bei beginn des Programms
 */
 
- NSLog(@"\n\n\n*UtilsNotificationAktion start: %@",[[note userInfo]description]);
+// NSLog(@"\n\n\n*UtilsNotificationAktion start: %@",[[note userInfo]description]);
 //NSLog(@"*UtilsNotificationAktion projektwahl: %@",[[note userInfo]objectForKey:@"projektwahl"]);
   //NSLog(@"*UtilsNotificationAktion Umgebung: %d",[[note userInfo]objectForKey:@"umgebung"]);
   
