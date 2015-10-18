@@ -301,6 +301,8 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    NSArray* mainarray = [[NSFileManager defaultManager]contentsOfDirectoryAtPath:ResourcePfad error:nil];
    //NSLog(@"mainarray: %@",mainarray);
    
+   
+   
    // B
    self.LeseboxDa=NO;
    self.ArchivPlayerGeladen=NO;
@@ -308,6 +310,10 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    self.mitAdminPasswort=YES;
    self.mitUserPasswort=YES;
    self.AdminZugangOK=NO;
+   NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 150.0/255 green:249.0/255 blue:150.0/255 alpha:1.0];
+
+   [self.RecPlayFenster setBackgroundColor:FensterFarbe];
+
    
  //  [self.window setDelegate:self];
    
@@ -569,7 +575,6 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    //   [self.RecPlayFenster setDelegate:self];
    //   [self.RecPlayFenster setBackgroundColor:HintergrundFarbe];
    //  NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 194.0/255 green:249.0/255 blue:194.0/255 alpha:1.0];
-   NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 150.0/255 green:249.0/255 blue:150.0/255 alpha:1.0];
    NSLog(@"awake D");
    //  self.view.backgroundColor=FensterFarbe;
    //[[self view]window].backgroundColor=FensterFarbe;
@@ -2291,7 +2296,7 @@ QTMovie* qtMovie;
 - (IBAction)startPlay:(id)sender
 {
    //NSLog(@"startPlay");
-   if([self isRecording])
+   if([self istRecording])
    {
       NSBeep();
       return;
@@ -3644,7 +3649,7 @@ QTMovie* qtMovie;
 
 - (IBAction)setzeLeser:(id)sender
 {
-   if ([AVRecorder isRecording])
+   if ([AVRecorder istRecording])
    {
       // ++
       
@@ -5012,7 +5017,7 @@ QTMovie* qtMovie;
         [Utils stopTimeout];
         [AVAbspielplayer invalTimer];
         //NSLog(@"TabView: archiv");
-        if (self.aktuellAnzAufnahmen &&!([AVRecorder isRecording]))
+        if (self.aktuellAnzAufnahmen &&!([AVRecorder istRecording]))
         {
            [self resetArchivPlayer:nil];
            [self.ArchivnamenPop setEnabled:NO];
@@ -5026,7 +5031,7 @@ QTMovie* qtMovie;
            NSAlert *Warnung = [[NSAlert alloc] init];
            [Warnung addButtonWithTitle:@"OK"];
            [Warnung setMessageText:@"Archiv"];
-           if ([AVRecorder isRecording] )
+           if ([AVRecorder istRecording] )
            {
               [Warnung setInformativeText:@"Die Aufnahme ist noch im Gang"];
            }
