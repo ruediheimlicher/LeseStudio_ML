@@ -336,7 +336,7 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    // C
    heuteTagDesJahres = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
    
-   NSLog(@"heuteTagDesJahres: %ld ",heuteTagDesJahres);
+   //NSLog(@"heuteTagDesJahres: %ld ",heuteTagDesJahres);
    
    
    
@@ -535,11 +535,9 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    
 //   NSArray* windowViewArray = [[self view] subviews];
    
-   NSLog(@"awake A");
    BOOL success = NO;
    NSError *error;
    Utils = [[rUtils alloc ]init];
-   NSLog(@"awake B");
    self.ProjektArray = [[NSMutableArray alloc]initWithCapacity:0];
    self.PListProjektArray = [[NSMutableArray alloc]initWithCapacity:0];
    self.ProjektNamenArray = [[NSMutableArray alloc]initWithCapacity:0];
@@ -550,7 +548,7 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    NSString* lb=@"Lesebox";
    NSString* cb=@"Anmerkungen";
    NSString*HomeLeseboxPfad=[NSHomeDirectory() stringByAppendingFormat:@"%@%@",@"/Documents/",lb];
-   NSLog(@"awake cb: %@  Lesebox: %@ HomeLeseboxPfad: %@",cb,lb,HomeLeseboxPfad);
+   //NSLog(@"awake cb: %@  Lesebox: %@ HomeLeseboxPfad: %@",cb,lb,HomeLeseboxPfad);
    
    NSString* locBeenden=@"Beenden";
    NSColor* HintergrundFarbe=[NSColor colorWithDeviceRed: 150.0/255 green:249.0/255 blue:150.0/255 alpha:1.0];
@@ -559,7 +557,6 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    NSColor * TitelFarbe=[NSColor purpleColor];
    NSFont* TitelFont;
    TitelFont=[NSFont fontWithName:@"Helvetica" size: 36];
-   NSLog(@"awake C");
    [[self TitelString]setFont:TitelFont];
    [[self TitelString] setTextColor:TitelFarbe];
    [[self ModusString] setFont:TitelFont];
@@ -570,7 +567,6 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    //   [self.RecPlayFenster setBackgroundColor:HintergrundFarbe];
    //  NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 194.0/255 green:249.0/255 blue:194.0/255 alpha:1.0];
    NSColor* FensterFarbe=[NSColor colorWithDeviceRed: 150.0/255 green:249.0/255 blue:150.0/255 alpha:1.0];
-   NSLog(@"awake D");
    //  self.view.backgroundColor=FensterFarbe;
    //[[self view]window].backgroundColor=FensterFarbe;
    
@@ -583,16 +579,13 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
  //  [[self.view window ]setDelegate:self];
    //	NSColor * TitelFarbe=[NSColor whiteColor];
    TitelFont=[NSFont fontWithName:@"Helvetica" size: 36];
-   NSLog(@"awake E");
    [self.TitelString setFont:TitelFont];
    [self.TitelString setTextColor:TitelFarbe];
    [self.ModusString setFont:TitelFont];
    [self.ModusString setTextColor:TitelFarbe];
-   NSLog(@"awake F");
    
    NSImage* myImage = [NSImage imageNamed: @"MicroIcon"];
    [NSApp setApplicationIconImage: myImage];
-   NSLog(@"awake G");
 // D
    // +++++++++
    // Menu-Akivierungen
@@ -629,7 +622,6 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
    [NotificationDic setObject:self.ProjektArray forKey:@"projektarray"];
    
    [nc postNotificationName:@"Utils" object:self userInfo:NotificationDic];
-   NSLog(@"awake H");
    
    [self.ProjektFeld setStringValue:[self.ProjektPfad lastPathComponent]];
    [self.RecorderMenu setSubmenu:self.ProjektMenu forItem:[self.RecorderMenu itemWithTag:kRecorderProjektWahlenTag]];
@@ -718,7 +710,6 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
          
    }//Switch Umgebung
    
-NSLog(@"awake I");
    
    [self Aufnahmevorbereiten];
    NSFont* Lesernamenfont;
@@ -868,7 +859,6 @@ NSLog(@"awake I");
       //  [self beginAdminPlayer:nil];
    }
 
-   NSLog(@"awake K");
    // Menu-Target-Teil nicht von viewDidLoad uebernommen
 }
 
@@ -960,7 +950,7 @@ NSLog(@"awake I");
    
    heuteTagDesJahres = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
 
-   NSLog(@"heuteTagDesJahres: %ld ",heuteTagDesJahres);
+   //NSLog(@"heuteTagDesJahres: %ld ",heuteTagDesJahres);
  
    
    

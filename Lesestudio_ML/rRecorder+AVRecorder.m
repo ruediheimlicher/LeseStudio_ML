@@ -295,7 +295,7 @@
    [AVAbspielplayer playAufnahme];
    float dur = ([AVAbspielplayer duration]);
    [Abspielanzeige setMax:dur];
-   NSLog(@"+AVRecorder startAVPlay dur: %f",dur);
+   //NSLog(@"+AVRecorder startAVPlay dur: %f",dur);
    [Abspielanzeige setNeedsDisplay:YES];
    [self.ArchivAbspielanzeige setMax:dur];
    

@@ -23,7 +23,7 @@
 
 - (void) awakeFromNib
 {
-	NSLog(@"rVolumes: awakeFromNib");
+	//NSLog(@"rVolumes: awakeFromNib");
    [self.window setAnimationBehavior:NSWindowAnimationBehaviorNone];
 	//[VolumesPopUp addItemWithTitle:@"Hallo"];
 	UserDic=[[NSMutableDictionary alloc] initWithCapacity:0];

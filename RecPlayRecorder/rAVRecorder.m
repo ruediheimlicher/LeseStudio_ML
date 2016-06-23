@@ -58,7 +58,7 @@
    self = [super init];
    if (self)
    {
-      NSLog(@"AVRecorder start");
+      //NSLog(@"AVRecorder start");
       // Create a capture session
       session = [[AVCaptureSession alloc] init];
       
@@ -126,6 +126,9 @@
       [session addOutput:audioPreviewOutput];
       
       // Select devices if any exist
+      [self setSelectedAudioDevice:[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio]];
+
+      /*
       AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
       if (videoDevice)
       {
@@ -138,6 +141,7 @@
          //NSLog(@"videoDevice no");
          [self setSelectedVideoDevice:[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeMuxed]];
       }
+       */
       //NSLog(@"transportControlsSupported: %d",[[self selectedAudioDevice] transportControlsSupported]);
       // Initial refresh of device list
       [self refreshDevices];
@@ -436,7 +440,7 @@
       tempDirPfad = [NSTemporaryDirectory() stringByAppendingPathComponent:[[NSProcessInfo processInfo] globallyUniqueString]];
       //NSLog(@"tempDirPfad: %@",tempDirPfad);
       tempfileURL = [NSURL fileURLWithPath:tempDirPfad isDirectory:YES];
-      NSLog(@"tempfileURL: %@",tempfileURL);
+      //NSLog(@"tempfileURL: %@",tempfileURL);
      // NSDate *now = [[NSDate alloc] init];
       //long t2 = (int)now.timeIntervalSince1970 - startzeit;
       //NSLog(@"setRecording t2: %ld",t2);
@@ -855,8 +859,8 @@ NSError *error = nil;
    //long t3 = now.timeIntervalSince1970/1000000 - startzeit;
    //NSLog(@"setRecording t3: %ld",t3);
 
-   NSLog(@"Did start recording to %@", [fileURL description]);
-   NSLog(@"Did start recording connections%@", [connections description]);
+   //NSLog(@"Did start recording to %@", [fileURL description]);
+   //NSLog(@"Did start recording connections%@", [connections description]);
   
    NSNotificationCenter * nc=[NSNotificationCenter defaultCenter];
    [nc postNotificationName:@"recording" object:self userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:@"record"]];

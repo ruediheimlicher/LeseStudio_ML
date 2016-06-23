@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
@@ -784,7 +784,7 @@
                         <tabViewItems>
                             <tabViewItem label="Recorder" identifier="1" id="gme-HZ-13g">
                                 <view key="view" ambiguous="YES" id="PHG-Kp-9jq">
-                                    <rect key="frame" x="10" y="33" width="141" height="0.0"/>
+                                    <rect key="frame" x="10" y="33" width="139" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" boxType="secondary" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="UuJ-V9-CHf">
@@ -805,7 +805,7 @@
                                                             <action selector="startAVStop:" target="fVs-b7-6wq" id="stF-kG-GDE"/>
                                                         </connections>
                                                     </button>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcr-DI-hES">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="95" translatesAutoresizingMaskIntoConstraints="NO" id="Fcr-DI-hES">
                                                         <rect key="frame" x="75" y="111" width="99" height="18"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Aufnahmezeit" id="4n5-l8-dNW">
                                                             <font key="font" metaFont="cellTitle"/>
@@ -849,7 +849,7 @@
                                                             <action selector="startAVPlay:" target="fVs-b7-6wq" id="mBU-mw-bpz"/>
                                                         </connections>
                                                     </button>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05U-uE-EUn">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="46" translatesAutoresizingMaskIntoConstraints="NO" id="05U-uE-EUn">
                                                         <rect key="frame" x="93" y="64" width="50" height="22"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Stop" id="sx9-IH-fPi">
                                                             <font key="font" metaFont="cellTitle"/>
@@ -857,7 +857,7 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMH-rN-dqe">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="46" translatesAutoresizingMaskIntoConstraints="NO" id="yMH-rN-dqe">
                                                         <rect key="frame" x="7" y="64" width="50" height="22"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Start" id="xcZ-MQ-hwa">
                                                             <font key="font" metaFont="cellTitle"/>
@@ -865,7 +865,7 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdL-UT-shg">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="54" translatesAutoresizingMaskIntoConstraints="NO" id="BdL-UT-shg">
                                                         <rect key="frame" x="187" y="64" width="58" height="22"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Zurück" id="Z8Z-G9-Lxn">
                                                             <font key="font" metaFont="cellTitle"/>
@@ -893,7 +893,7 @@
                                                             <action selector="stopAVPlay:" target="fVs-b7-6wq" id="pP4-gB-So4"/>
                                                         </connections>
                                                     </button>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-Qn-g0n">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="76" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-Qn-g0n">
                                                         <rect key="frame" x="78" y="109" width="80" height="18"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Abspielzeit" id="qVL-R6-QRT">
                                                             <font key="font" metaFont="cellTitle"/>
@@ -1027,11 +1027,11 @@
                                                     <scrollView fixedFrame="YES" horizontalLineScroll="18" horizontalPageScroll="0.0" verticalLineScroll="18" verticalPageScroll="0.0" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bM1-bp-xkK">
                                                         <rect key="frame" x="11" y="43" width="520" height="76"/>
                                                         <clipView key="contentView" ambiguous="YES" id="fut-Sh-Rcj">
-                                                            <rect key="frame" x="1" y="17" width="503" height="58"/>
+                                                            <rect key="frame" x="1" y="0.0" width="503" height="75"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="16" headerView="JnT-I8-5TG" id="QsB-aa-mSg" customClass="rArchivView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="503" height="58"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="503" height="52"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1060,11 +1060,11 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="5vu-9R-i62">
-                                                            <rect key="frame" x="1" y="17" width="15" height="0.0"/>
+                                                            <rect key="frame" x="504" y="23" width="15" height="52"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <tableHeaderView key="headerView" id="JnT-I8-5TG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="503" height="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="503" height="23"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableHeaderView>
                                                     </scrollView>
@@ -1127,7 +1127,7 @@
                                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBy-da-M6H" customClass="rAbspielanzeige">
                                                         <rect key="frame" x="13" y="114" width="195" height="21"/>
                                                     </customView>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzf-bg-hLM">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="xzf-bg-hLM">
                                                         <rect key="frame" x="132" y="88" width="29" height="13"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="pos" id="R6J-hc-JWJ">
                                                             <font key="font" metaFont="label"/>
@@ -1149,7 +1149,7 @@
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-0v-nIC">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="38" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-0v-nIC">
                                                         <rect key="frame" x="11" y="89" width="42" height="13"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Dauer:" id="xmV-k1-gRx">
                                                             <font key="font" metaFont="label"/>
@@ -1212,7 +1212,7 @@
                                                             <color key="backgroundColor" white="0.94999998809999997" alpha="1" colorSpace="calibratedWhite"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DD5-oU-7fC">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="39" translatesAutoresizingMaskIntoConstraints="NO" id="DD5-oU-7fC">
                                                         <rect key="frame" x="4" y="105" width="43" height="11"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Datum" id="WPV-Ko-gm9">
                                                             <font key="font" metaFont="miniSystem"/>
@@ -1228,7 +1228,7 @@
                                                             <color key="backgroundColor" white="0.94999998809999997" alpha="1" colorSpace="calibratedWhite"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7C-f5-40J">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="39" translatesAutoresizingMaskIntoConstraints="NO" id="g7C-f5-40J">
                                                         <rect key="frame" x="4" y="124" width="43" height="11"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Titel" id="z4d-Qc-3O0">
                                                             <font key="font" metaFont="miniSystem"/>
@@ -1260,7 +1260,7 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Mo-n7-gPM">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="49" translatesAutoresizingMaskIntoConstraints="NO" id="0Mo-n7-gPM">
                                                         <rect key="frame" x="10" y="17" width="53" height="11"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Bewertung" id="iW9-R1-Ead">
                                                             <font key="font" metaFont="miniSystem"/>
@@ -1268,7 +1268,7 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-pC-kcR">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-pC-kcR">
                                                         <rect key="frame" x="241" y="16" width="29" height="11"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Note" id="1rS-2O-VWp">
                                                             <font key="font" metaFont="miniSystem"/>
@@ -1283,7 +1283,7 @@
                                                             <font key="font" metaFont="miniSystem"/>
                                                         </buttonCell>
                                                     </button>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zqo-qi-Tff">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zqo-qi-Tff">
                                                         <rect key="frame" x="244" y="104" width="32" height="11"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Best:" id="0bg-PN-bzq">
                                                             <font key="font" metaFont="miniSystemBold"/>
@@ -1291,7 +1291,7 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rZn-75-jc1">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="44" translatesAutoresizingMaskIntoConstraints="NO" id="rZn-75-jc1">
                                                         <rect key="frame" x="227" y="122" width="48" height="13"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Nummer:" id="XkE-9N-L96">
                                                             <font key="font" metaFont="miniSystem"/>
@@ -1316,7 +1316,7 @@
                             <rect key="frame" x="2" y="2" width="580" height="98"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quO-SB-C42">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="152" translatesAutoresizingMaskIntoConstraints="NO" id="quO-SB-C42">
                                     <rect key="frame" x="-70" y="18" width="156" height="22"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Projekt:" id="75L-Oq-LeK">
                                         <font key="font" metaFont="system" size="18"/>
@@ -1332,7 +1332,7 @@
                                         <color key="backgroundColor" red="0.87226277590000001" green="0.87226277590000001" blue="0.86496353150000005" alpha="1" colorSpace="calibratedRGB"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTN-Ws-PgF">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="172" translatesAutoresizingMaskIntoConstraints="NO" id="NTN-Ws-PgF">
                                     <rect key="frame" x="390" y="46" width="176" height="42"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Recorder" id="nGG-K8-vFA">
                                         <font key="font" size="24" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -1340,7 +1340,7 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yup-zt-cTJ">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="263" translatesAutoresizingMaskIntoConstraints="NO" id="Yup-zt-cTJ">
                                     <rect key="frame" x="14" y="46" width="267" height="42"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Lesestudio" id="wec-B9-GGY">
                                         <font key="font" size="27" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -1367,7 +1367,7 @@
                                         <color key="backgroundColor" white="0.94999998809999997" alpha="1" colorSpace="calibratedWhite"/>
                                     </comboBoxCell>
                                 </comboBox>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdb-Ee-eY9">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="45" translatesAutoresizingMaskIntoConstraints="NO" id="Mdb-Ee-eY9">
                                     <rect key="frame" x="142" y="17" width="49" height="22"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Titel:" id="89C-IV-GNn">
                                         <font key="font" metaFont="system" size="14"/>
@@ -1375,7 +1375,7 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhj-MH-A4V">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="Lhj-MH-A4V">
                                     <rect key="frame" x="18" y="21" width="47" height="13"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Timeout:" id="78f-hM-3kI">
                                         <font key="font" metaFont="label"/>
