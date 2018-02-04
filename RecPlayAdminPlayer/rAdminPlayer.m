@@ -3550,11 +3550,19 @@ const short kRecPlayUmgebung=0;
 						  [Warnung setMessageText:s2];
 						  [Warnung setInformativeText:FehlerString];
 						  [Warnung setAlertStyle:NSWarningAlertStyle];
-						  [Warnung beginSheetModalForWindow:AdminFenster
-											  modalDelegate:nil
-											 didEndSelector:nil
-												contextInfo:nil];
+						  //[Warnung beginSheetModalForWindow:AdminFenster
+							//				  modalDelegate:nil
+							//				 didEndSelector:nil
+							//					contextInfo:nil];
 						  
+                    [Warnung beginSheetModalForWindow:AdminFenster completionHandler:^(NSModalResponse returnCode) {
+                       if (returnCode == NSAlertSecondButtonReturn) {
+                          NSLog(@"Umnumerieren erfolglos!");
+                          return;
+                       }
+                       
+                       NSLog(@"This project was deleted!");
+                    }];
 						  //int Antwort=NSRunAlertPanel(@"Fehler beim Umnummerieren", FehlerString,@"OK", NULL,NULL);
 						  return;
 					  }

@@ -4749,6 +4749,23 @@ QTMovie* qtMovie;
    
 }
 
+- (IBAction)rewindArchivAVPlay:(id)sender
+{
+   //NSLog(@"rewindAVPlay");
+   [AVAbspielplayer rewindTempAufnahme];
+   // [self.BackKnopf setEnabled:NO];
+   [self.ArchivRewindTaste setEnabled:YES];
+}
+
+- (IBAction)forewardArchivAVPlay:(id)sender
+{
+   // //NSLog(@"forewardAVPlay");
+   [AVAbspielplayer forewardTempAufnahme];
+   //[self.BackKnopf setEnabled:NO];
+   [self.ArchivRewindTaste setEnabled:YES];
+}
+
+
 - (void)setArchivView
 {
    NSFileManager *Filemanager=[NSFileManager defaultManager];
@@ -5009,7 +5026,7 @@ QTMovie* qtMovie;
            [self.ArchivInPlayerTaste setEnabled:NO];
            [self.ArchivView deselectAll:NULL];
            [self.ArchivPlayTaste setEnabled:NO];
-           [self.RecPlayFenster makeFirstResponder:self.ArchivView];
+  //         [self.RecPlayFenster makeFirstResponder:self.ArchivView];
         }
         else
         {

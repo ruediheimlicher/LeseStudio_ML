@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1070" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="rTitelListe">
@@ -32,7 +33,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="459"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="7">
+                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="7">
                         <rect key="frame" x="93" y="393" width="275" height="51"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" alignment="left" title="Titelliste" id="107">
@@ -60,7 +61,7 @@ DQ
                             <action selector="reportClose:" target="-2" id="64"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="71">
+                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="71">
                         <rect key="frame" x="266" y="335" width="300" height="27"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="left" id="112">
@@ -76,7 +77,7 @@ DQ
                             <rect key="frame" x="2" y="2" width="546" height="49"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField verticalHuggingPriority="750" id="88">
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="88">
                                     <rect key="frame" x="15" y="14" width="368" height="22"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="113">
@@ -101,8 +102,6 @@ DQ
                                 </button>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                     </box>
                     <box title="Titel für die Aufnahmen im Projekt:" titlePosition="noTitle" id="93">
@@ -116,7 +115,7 @@ DQ
                                     <rect key="frame" x="16" y="7" width="394" height="175"/>
                                     <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                     <clipView key="contentView" id="zNs-Fc-rcR">
-                                        <rect key="frame" x="1" y="17" width="392" height="157"/>
+                                        <rect key="frame" x="1" y="0.0" width="392" height="174"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="sequential" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" headerView="118" id="96">
@@ -129,7 +128,7 @@ DQ
                                                 <tableColumns>
                                                     <tableColumn identifier="ok" width="63.125" minWidth="30" maxWidth="1000" id="98">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Aktiviert">
-                                                            <font key="font" metaFont="system" size="14"/>
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                         </tableHeaderCell>
@@ -141,7 +140,7 @@ DQ
                                                     </tableColumn>
                                                     <tableColumn identifier="titel" editable="NO" width="300.982421875" minWidth="37.982421875" maxWidth="1000" id="97">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Titel">
-                                                            <font key="font" metaFont="system" size="14"/>
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                         </tableHeaderCell>
@@ -155,7 +154,6 @@ DQ
                                                 </tableColumns>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </clipView>
                                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="117">
                                         <rect key="frame" x="-100" y="-100" width="221" height="15"/>
@@ -183,11 +181,9 @@ DQ
                                 </button>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system" size="14"/>
                     </box>
-                    <textField verticalHuggingPriority="750" id="27">
+                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="27">
                         <rect key="frame" x="18" y="336" width="244" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Titel für die Aufnahmen im Projekt:" id="111">
@@ -209,12 +205,9 @@ DQ
                     </button>
                 </subviews>
             </view>
-            <connections>
-                <outlet property="initialFirstResponder" destination="88" id="105"/>
-            </connections>
         </window>
     </objects>
     <resources>
-        <image name="MicroIcon" width="105" height="105"/>
+        <image name="MicroIcon" width="32" height="32"/>
     </resources>
 </document>

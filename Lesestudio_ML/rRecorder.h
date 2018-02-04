@@ -260,7 +260,7 @@
 
 
 
-@property  (assign)	IBOutlet rArchivView*			ArchivView;
+@property  (strong)	IBOutlet rArchivView*			ArchivView;
 @property (weak) IBOutlet NSButton*					ArchivPlayTaste;
 @property (weak) IBOutlet NSButton*					ArchivStopTaste;
 @property (weak) IBOutlet NSButton*					ArchivZumStartTaste;
@@ -292,8 +292,8 @@
 @property  (assign) IBOutlet NSTextView*          ArchivKommentarView;
 @property BOOL                                  ArchivZeilenhit;
 @property int                                   RPDevicedatenlaenge;
-@property int									Wert1, Wert2, Wert3;
-@property int									aktuellAnzAufnahmen;
+@property int									         Wert1, Wert2, Wert3;
+@property int									         aktuellAnzAufnahmen;
 
 #pragma mark storyboard
 @property (weak) IBOutlet NSButton*					zuTestfeldTaste;

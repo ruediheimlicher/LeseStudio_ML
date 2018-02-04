@@ -2300,11 +2300,12 @@ return versionOK;
 				int antwort=[Warnung runModal];
 				switch (antwort)
 				{
-					case NSAlertDefaultReturn:
+					case NSAlertFirstButtonReturn:
 					{
 						
 					}break;
-					case NSAlertAlternateReturn:
+               case NSAlertSecondButtonReturn
+:
 					{
 						//Beenden
 						NSMutableDictionary* BeendenDic=[[NSMutableDictionary alloc]initWithCapacity:0];
@@ -2567,12 +2568,23 @@ return versionOK;
     CFStringRef     trashPath;
     OSErr           err;
     NSFileManager   *mgr = [NSFileManager defaultManager];
+   
+   NSURL* fileURL = [NSURL fileURLWithPath:filePath];
+   NSURL* resultURL;
+   NSError* trasherr;
+   [mgr trashItemAtURL:fileURL resultingItemURL:&resultURL error:&trasherr];
+   if (trasherr)
+   {
+      NSLog(@"Trash operation did not succeed!");
+   }
+   /*
     err = FSFindFolder(kUserDomain, kTrashFolderType, kDontCreateFolder, &trashFolderRef);
     if (err == noErr) 
 	  {
 		trashURL = CFURLCreateFromFSRef(kCFAllocatorSystemDefault, &trashFolderRef);
 		if (trashURL) 
 		  {
+           
 			trashPath = CFURLCopyFileSystemPath (trashURL, kCFURLPOSIXPathStyle);
 			//if (![mgr movePath:filePath toPath:[(NSString *)trashPath stringByAppendingPathComponent:[filePath lastPathComponent]] handler:nil])
 				
@@ -2583,7 +2595,7 @@ return versionOK;
         
         }
     }
-	
+	*/
 }
 
  - (int) fileInPapierkorb:(NSString*) derFilepfad
@@ -3462,7 +3474,7 @@ if (UTimeoutDialogPanel)
 	OSErr						AufnahmeErr = noErr;
 	char*						CKommentarString=NULL;
 	long						AufnahmeLength = 0;
-	Handle					KommentarHandle=NewHandleClear(0);
+	//Handle					KommentarHandle=NewHandleClear(0);
 	
 	//Movie finden
 	NSError* loadErr;
@@ -3677,6 +3689,8 @@ NSUInteger dayOfYearForDate(NSDate *dasDatum)
    
    return jahr;
 }
+
+
 
 #pragma mark regex
 

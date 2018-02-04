@@ -2,7 +2,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface rProjektListePanel : NSWindowController
+@interface rProjektListePanel : NSWindowController <NSCollectionViewDataSource>
 {
     IBOutlet id EingabeFeld;
     IBOutlet id InListeTaste;

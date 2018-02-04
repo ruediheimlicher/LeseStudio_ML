@@ -22,7 +22,7 @@
 
 - (void)setData: (NSDictionary *)someData forRow: (long)rowIndex;
 - (NSDictionary *)dataForRow: (long)rowIndex;
-- (int)ZeileVonLeser:(NSString*)derLeser;
+- (long)ZeileVonLeser:(NSString*)derLeser;
 
 - (void)setAufnahmeFiles:(NSArray*)derArray forRow: (long)dieZeile;
 - (NSArray*)AufnahmeFilesFuerZeile:(long)dieZeile;

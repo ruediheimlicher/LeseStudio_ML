@@ -60,7 +60,8 @@ enum
    
    
    //	LeseboxDa=YES;
-   //	LeseboxPfad=@"/Users/sysadmin/Documents/Lesebox";
+//   self.LeseboxPfad=@"/Users/ruediheimlicher/Documents/Lesebox";
+  
    if (!self.LeseboxDa)
    {
       //NSLog(@"User nach gewuenschter Lesebox fragen");

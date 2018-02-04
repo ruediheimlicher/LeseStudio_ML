@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1050" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="rKommentar">
@@ -25,7 +26,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <drawer preferredEdge="minY" trailingOffset="15" id="11" userLabel="Drawer">
             <size key="contentSize" width="200" height="200"/>
             <size key="minContentSize" width="50" height="50"/>
@@ -71,7 +72,7 @@
                     <autoresizingMask key="autoresizingMask"/>
                     <popUpButtonCell key="cell" type="bevel" title="Alle neusten Anmerkungen" bezelStyle="regularSquare" alignment="left" lineBreakMode="clipping" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="38" id="234">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="35">
                             <items>
                                 <menuItem title="Alle neusten Anmerkungen" hidden="YES" id="38"/>
@@ -81,7 +82,7 @@
                         </menu>
                     </popUpButtonCell>
                 </popUpButton>
-                <textField verticalHuggingPriority="750" id="24">
+                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="24">
                     <rect key="frame" x="17" y="162" width="216" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Was soll gedruckt werden?" id="233">
@@ -139,15 +140,13 @@
                             <rect key="frame" x="1" y="1" width="758" height="324"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="18">
+                                <textView editable="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" spellingCorrection="YES" smartInsertDelete="YES" id="18">
                                     <rect key="frame" x="0.0" y="0.0" width="758" height="324"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="758" height="324"/>
-                                    <size key="maxSize" width="758" height="10000000"/>
+                                    <size key="maxSize" width="760" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="758" height="324"/>
-                                    <size key="maxSize" width="758" height="10000000"/>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,7 +225,7 @@
                                         <action selector="reportKommentarOption:" target="-2" id="112"/>
                                     </connections>
                                 </matrix>
-                                <textField verticalHuggingPriority="750" id="111">
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="111">
                                     <rect key="frame" x="25" y="106" width="216" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Was soll dargestellt werden?" id="235">
@@ -240,7 +239,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <popUpButtonCell key="cell" type="push" title="Anmerkungen für:" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="120" id="236">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="119">
                                             <items>
                                                 <menuItem title="Alle neusten Anmerkungen" id="117"/>
@@ -256,12 +255,12 @@
                                 <popUpButton verticalHuggingPriority="750" id="134">
                                     <rect key="frame" x="684" y="74" width="65" height="26"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <popUpButtonCell key="cell" type="push" title="2" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" enabled="NO" state="on" borderStyle="borderAndBezel" tag="2" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="238">
+                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" enabled="NO" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="238">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="135">
                                             <items>
-                                                <menuItem title="2" state="on" tag="2" id="136">
+                                                <menuItem title="2" tag="2" id="136">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                                 <menuItem title="3" tag="3" id="139">
@@ -283,7 +282,7 @@
                                         <action selector="reportAnzahl:" target="-2" id="165"/>
                                     </connections>
                                 </popUpButton>
-                                <textField verticalHuggingPriority="750" id="131">
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="131">
                                     <rect key="frame" x="640" y="74" width="42" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="max." id="237">
@@ -297,7 +296,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" enabled="NO" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="155" id="240">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="156">
                                             <items>
                                                 <menuItem state="on" id="155">
@@ -310,7 +309,7 @@
                                         <action selector="reportPopB:" target="-2" id="162"/>
                                     </connections>
                                 </popUpButton>
-                                <textField verticalHuggingPriority="750" id="170">
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="170">
                                     <rect key="frame" x="717" y="11" width="28" height="21"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="right" title="Anz" drawsBackground="YES" id="241">
@@ -330,7 +329,7 @@
                                         <action selector="nurMarkierteOption:" target="-2" id="175"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="183">
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="183">
                                     <rect key="frame" x="215" y="45" width="73" height="17"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" id="244">
@@ -344,7 +343,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <popUpButtonCell key="cell" type="push" title=" " bezelStyle="rounded" alignment="left" lineBreakMode="clipping" enabled="NO" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="199" id="245">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="198">
                                             <items>
                                                 <menuItem title=" " state="on" id="199">
@@ -357,7 +356,7 @@
                                         <action selector="reportProjektNamenOption:" target="-2" id="227"/>
                                     </connections>
                                 </popUpButton>
-                                <textField verticalHuggingPriority="750" id="171">
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="171">
                                     <rect key="frame" x="523" y="13" width="186" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Anzahl gefundene Anmerkungen:" id="242">
@@ -366,7 +365,7 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="222">
+                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="222">
                                     <rect key="frame" x="16" y="179" width="169" height="29"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="246">
@@ -381,12 +380,12 @@
                                 <popUpButton verticalHuggingPriority="750" tag="32" id="144">
                                     <rect key="frame" x="301" y="74" width="324" height="26"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" enabled="NO" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="141" id="239">
+                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" enabled="NO" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="141" id="239">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="145">
                                             <items>
-                                                <menuItem id="141">
+                                                <menuItem state="on" id="141">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                             </items>
@@ -398,8 +397,6 @@
                                 </popUpButton>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                 </subviews>
             </view>

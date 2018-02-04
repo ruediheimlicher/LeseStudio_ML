@@ -74,7 +74,7 @@
    [EingabeFeld setToolTip:@"Name des neuen Projekts"];
    [FixTaste setToolTip:@"Titelfuer neue Aufnahmen fixieren.\nDie Liste der Titel kann im Menu 'Admin->Change Nameliste' veraendert werden."];
    [InListeTaste setToolTip:@"Einen neuen Projektordner einrichten und in der Liste einsetzen."];
-   [AuswahlenTaste setToolTip:@"Das angeklickte Projekt auswŠhlen"];
+   [AuswahlenTaste setToolTip:@"Das angeklickte Projekt auswaehlen"];
    [EntfernenTaste setToolTip:@"Das angeklickte Projekt mit verschiedenen Optionen entfernen."];
 
 
@@ -204,7 +204,7 @@ vomStart=NO;
 	  NSString* s3=@"Was soll mit dem  Projektordner %@ geschehen?";
 	  [Warnung addButtonWithTitle:@"> Papierkorb"];
 	  [Warnung addButtonWithTitle:@"> Magazin"];
-	  [Warnung addButtonWithTitle:@"Sofort lšschen"];
+	  [Warnung addButtonWithTitle:@"Sofort loeschen"];
 	  [Warnung addButtonWithTitle:@"Abbrechen"];
 	  [Warnung setMessageText:[NSString stringWithFormat:s3,ProjektEntfernenString]];
 	  

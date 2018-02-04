@@ -174,7 +174,7 @@
 }
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(long)row;
 {
-	//NSLog(@"Archiv Delegate tableView  shouldSelectRow: %d",row);
+	NSLog(@"Archiv Delegate tableView  shouldSelectRow: %d",row);
 	NSNumber* ZeilenNummer;
 	ZeilenNummer=[NSNumber numberWithLong:row];
    NSNumber* lastZeilenNumber = [NSNumber numberWithDouble:[tableView selectedRow]];

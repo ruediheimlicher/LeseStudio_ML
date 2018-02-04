@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="101000" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="rMarkierung">
@@ -55,7 +56,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="MicroIcon" id="64"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="43">
+                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="43">
                         <rect key="frame" x="104" y="169" width="290" height="65"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" alignment="left" title="Markierungen entfernen" id="65">
@@ -64,7 +65,7 @@ DQ
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="44">
+                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="44">
                         <rect key="frame" x="21" y="127" width="391" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" selectable="YES" alignment="left" title="Welche Markierungen sollen gelöscht werden?" id="66">
@@ -100,11 +101,10 @@ DQ
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="23"/>
-                <outlet property="initialFirstResponder" destination="12" id="39"/>
             </connections>
         </window>
     </objects>
     <resources>
-        <image name="MicroIcon" width="105" height="105"/>
+        <image name="MicroIcon" width="32" height="32"/>
     </resources>
 </document>

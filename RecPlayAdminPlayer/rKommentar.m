@@ -132,7 +132,7 @@ typedef NS_ENUM(NSInteger, A)
                         if ([[self AufnahmeTitelVon:eineAufnahme] isEqualToString:derTitel])
                         {
                            NSString* 	tempKommentarPfad=[LeserKommentarPfad stringByAppendingPathComponent:eineAufnahme];
-                           if ([Filemanager fileExistsAtPath:tempKommentarPfad])// Kommentar für eineAufnahme ist da)
+                           if ([Filemanager fileExistsAtPath:tempKommentarPfad])// Kommentar fuer eineAufnahme ist da)
                            {
                               if (![tempLeserArray containsObject:einLeser])
                               {
@@ -248,7 +248,7 @@ typedef NS_ENUM(NSInteger, A)
                     NSString* tempKommentarTitel =[[eineAufnahme stringByDeletingPathExtension]stringByAppendingPathExtension:@"txt"];
                     
                     NSString* tempKommentarPfad=[LeserKommentarPfad stringByAppendingPathComponent:tempKommentarTitel];
-                    if ([Filemanager fileExistsAtPath:tempKommentarPfad])//Kommentar für letzte Aufnahme ist da)
+                    if ([Filemanager fileExistsAtPath:tempKommentarPfad])//Kommentar fuer letzte Aufnahme ist da)
                     {
                        // lastKommentarMitTitelString=[NSString stringWithContentsOfFile:lastKommentarPfad encoding:NSMacOSRomanStringEncoding error:NULL];
                        
@@ -301,7 +301,7 @@ typedef NS_ENUM(NSInteger, A)
    if (![LeserArray count])
 	  {
         //NSLog(@"alleKommentareZuTitel: Archiv ist leer");
-        //NSString* ArchivLeerString=NSLocalizedString(@"There are no comments for this project",@"Für dieses Projekt hat es keine Anmerkungen");
+        //NSString* ArchivLeerString=NSLocalizedString(@"There are no comments for this project",@"Fuer dieses Projekt hat es keine Anmerkungen");
         NSString* ArchivLeerString=@"Fuer dieses Projekt hat es keine Anmerkungen";
         [alleKommentareArray addObject:ArchivLeerString];
      }
@@ -326,8 +326,8 @@ typedef NS_ENUM(NSInteger, A)
          if (![tempKommentarArray count])
          {
             //NSLog(@"alleKommentareZuTitel: Kommentarordner von %@ ist leer",tempLeser);
-            //NSString* ArchivLeerString=NSLocalizedString(@"There are no comments for this project",@"Für dieses Projekt hat es keine Anmerkungen");
-            NSString* ArchivLeerString=@"Für dieses Projekt hat es keine Anmerkungen";
+            //NSString* ArchivLeerString=NSLocalizedString(@"There are no comments for this project",@"Fuer dieses Projekt hat es keine Anmerkungen");
+            NSString* ArchivLeerString=@"Fuer dieses Projekt hat es keine Anmerkungen";
             [alleKommentareArray addObject:ArchivLeerString];
             
             //return alleKommentareArray;
@@ -343,8 +343,8 @@ typedef NS_ENUM(NSInteger, A)
             {
                
                //NSLog(@"alleKommentareZuTitel: Kommentarordner nach .DS von %@ ist leer",tempLeser);
-               //NSString* ArchivLeerString=NSLocalizedString(@"There are no comments for this project",@"Für dieses Projekt hat es keine Anmerkungen");
-               NSString* ArchivLeerString=@"Für dieses Projekt hat es keine Anmerkungen";
+               //NSString* ArchivLeerString=NSLocalizedString(@"There are no comments for this project",@"Fuer dieses Projekt hat es keine Anmerkungen");
+               NSString* ArchivLeerString=@"Fuer dieses Projekt hat es keine Anmerkungen";
                [alleKommentareArray addObject:ArchivLeerString];
                
                //return alleKommentareArray;
@@ -480,7 +480,7 @@ typedef NS_ENUM(NSInteger, A)
                        
                        //NSLog(@": tempKommentarPfad: %@",tempKommentarPfad);
                        
-                       if ([Filemanager fileExistsAtPath:tempKommentarPfad])//Kommentar für Aufnahme ist da)
+                       if ([Filemanager fileExistsAtPath:tempKommentarPfad])//Kommentar fuer Aufnahme ist da)
                        {
                           NSString* tempKommentarMitTitelString=[NSString stringWithContentsOfFile:tempKommentarPfad encoding:NSMacOSRomanStringEncoding error:NULL];
                           if (pos)//Ab zweitem Kommentar Name entfernen
@@ -691,7 +691,7 @@ typedef NS_ENUM(NSInteger, A)
         }
         else
         {
-           //Kein Kommentarordner für Leser
+           //Kein Kommentarordner fuer Leser
         }
         //NSLog(@"vor ende if: Leser: %@  Kommentarordner : %@",derLeser, tempKommentareArray);
      }//if exists LeserPfad
@@ -846,7 +846,7 @@ typedef NS_ENUM(NSInteger, A)
                  
                  
                  
-                 if ([Filemanager fileExistsAtPath:tempKommentarPfad])//Kommentar für diese Aufnahme ist da)
+                 if ([Filemanager fileExistsAtPath:tempKommentarPfad])//Kommentar fuer diese Aufnahme ist da)
                  {
                     //
                     int n=[self AufnahmeNummerVon:eineAufnahme];
@@ -877,7 +877,7 @@ typedef NS_ENUM(NSInteger, A)
            {
               //NSLog(@"Keine Aufnahmen von: %@",derLeser);
               //NSLog(@"alleKommentareZuTitel: Kommentarordner von %@ ist leer",tempLeser);
-              NSString* keineAufnahmeString=@"Für dieses Leser hat es keine Aufnahmen";
+              NSString* keineAufnahmeString=@"Fuer dieses Leser hat es keine Aufnahmen";
               lastKommentarString=keineAufnahmeString;
            }
         }//[tempAufnahmen count]
@@ -1172,7 +1172,7 @@ typedef NS_ENUM(NSInteger, A)
                           }
                        }
                        //NSLog(@"TitelArrayVon: %@  tempTitel: %@",derLeser,tempTitel);
-                    }//Kommentar für Aufnahme da
+                    }//Kommentar fuer Aufnahme da
                  }
                  else
                  {
@@ -1297,7 +1297,7 @@ typedef NS_ENUM(NSInteger, A)
    while (einProjektPfad=[ProjektPfadEnum nextObject])
    {
       //NSLog(@"while einProjektPfad:        einProjektPfad: %@",einProjektPfad);
-      //KommentarString enthält den Kopfstring und die Kommentare für einProjektPfad
+      //KommentarString enthält den Kopfstring und die Kommentare fuer einProjektPfad
       NSMutableString* projektKommentarString=[NSMutableString stringWithCapacity:0];
       
       //tempKommentarArray enthält die Kommentare entsprechend den Einstellungen im Kommentarfenster
@@ -1402,7 +1402,7 @@ typedef NS_ENUM(NSInteger, A)
       }//switch KommentarOption
       
       //
-      //tempKommentarArray enthält die Kommentare für einProjektPfad
+      //tempKommentarArray enthält die Kommentare fuer einProjektPfad
       
       //NSLog(@"\n******************\n\ntempKommentarArray nach switch: : %@\n\n**********",[tempKommentarArray description]);
       
@@ -1628,10 +1628,10 @@ typedef NS_ENUM(NSInteger, A)
    //if ([tempKommentarStringArray count]==0)
    if ([returnKommentarStringArray count]==0)
    {
-      //Keine Kommentare für diese Settings
+      //Keine Kommentare fuer diese Settings
       NSMutableDictionary* keinKommentarStringDic=[[NSMutableDictionary alloc]initWithCapacity:0];
-      NSString* keinKommentarProjektString=@"Leerer Ordner für Anmerkungen";
-      NSString* keinKommentarString=@"Keine Kommentare für diese Einstellungen";
+      NSString* keinKommentarProjektString=@"Leerer Ordner fuer Anmerkungen";
+      NSString* keinKommentarString=@"Keine Kommentare fuer diese Einstellungen";
       
       [keinKommentarStringDic setObject: keinKommentarString forKey:@"kommentarstring"];
       [keinKommentarStringDic setObject: keinKommentarProjektString forKey:@"projekt"];
@@ -1855,18 +1855,18 @@ typedef NS_ENUM(NSInteger, A)
    //NSString* TitelString=@"Anmerkungen vom ";
    NSString* KopfString=[NSString stringWithFormat:@"%@  %@%@",@"Anmerkungen vom ",heuteDatumString,@"\r\r"];
    
-   //Font für Titelzeile
+   //Font fuer Titelzeile
    NSFont* TitelFont;
    TitelFont=[NSFont fontWithName:@"Helvetica" size: 14];
    
-   //Stil für Titelzeile
+   //Stil fuer Titelzeile
    NSMutableParagraphStyle* TitelStil=[[NSMutableParagraphStyle alloc]init];
    [TitelStil setTabStops:[NSArray array]];//default weg
    NSTextTab* TitelTab1=[[NSTextTab alloc]initWithType:NSLeftTabStopType location:90];
    
    [TitelStil addTabStop:TitelTab1];
    
-   //Attr-String für Titelzeile zusammensetzen
+   //Attr-String fuer Titelzeile zusammensetzen
    NSMutableAttributedString* attrTitelString=[[NSMutableAttributedString alloc] initWithString:KopfString];
    [attrTitelString addAttribute:NSParagraphStyleAttributeName value:TitelStil range:NSMakeRange(0,[KopfString length])];
    [attrTitelString addAttribute:NSFontAttributeName value:TitelFont range:NSMakeRange(0,[KopfString length])];
@@ -1876,20 +1876,20 @@ typedef NS_ENUM(NSInteger, A)
    
    
    
-   //Font für Projektzeile
+   //Font fuer Projektzeile
    NSFont* ProjektFont;
    ProjektFont=[NSFont fontWithName:@"Helvetica" size: 12];
    
    NSString* ProjektString=@"Projekt: ";
    NSString* ProjektKopfString=[NSString stringWithFormat:@"%@    %@%@",ProjektString,ProjektTitel,@"\r"];
    
-   //Stil für Projektzeile
+   //Stil fuer Projektzeile
    NSMutableParagraphStyle* ProjektStil=[[NSMutableParagraphStyle alloc]init];
    [ProjektStil setTabStops:[NSArray array]];//default weg
    NSTextTab* ProjektTab1=[[NSTextTab alloc]initWithType:NSLeftTabStopType location:150];
    [ProjektStil addTabStop:ProjektTab1];
    
-   //Attr-String für Projektzeile zusammensetzen
+   //Attr-String fuer Projektzeile zusammensetzen
    NSMutableAttributedString* attrProjektString=[[NSMutableAttributedString alloc] initWithString:ProjektKopfString];
    [attrProjektString addAttribute:NSParagraphStyleAttributeName value:ProjektStil range:NSMakeRange(0,[ProjektKopfString length])];
    [attrProjektString addAttribute:NSFontAttributeName value:ProjektFont range:NSMakeRange(0,[ProjektKopfString length])];
@@ -1897,7 +1897,7 @@ typedef NS_ENUM(NSInteger, A)
    //Projektzeile einsetzen
    [[KommentarView textStorage]appendAttributedString:attrProjektString];
    
-   //Stil für Abstand1
+   //Stil fuer Abstand1
    NSMutableParagraphStyle* Abstand1Stil=[[NSMutableParagraphStyle alloc]init];
    NSFont* Abstand1Font=[NSFont fontWithName:@"Helvetica" size: 8];
    NSMutableAttributedString* attrAbstand1String=[[NSMutableAttributedString alloc] initWithString:@" \r"];
@@ -2047,7 +2047,7 @@ typedef NS_ENUM(NSInteger, A)
          [attrKopfString addAttribute:NSFontAttributeName value:TextFont range:NSMakeRange(0,[TabellenkopfString length])];
          [[KommentarView textStorage]appendAttributedString:attrKopfString];
          
-         //Stil für Abstand2
+         //Stil fuer Abstand2
          NSMutableParagraphStyle* Abstand2Stil=[[NSMutableParagraphStyle alloc]init];
          NSFont* Abstand2Font=[NSFont fontWithName:@"Helvetica" size: 2];
          NSMutableAttributedString* attrAbstand2String=[[NSMutableAttributedString alloc] initWithString:@" \r"];
@@ -2132,16 +2132,16 @@ typedef NS_ENUM(NSInteger, A)
    //NSString* TitelString=@"Anmerkungen vom ";
    NSString* KopfString=[NSString stringWithFormat:@"%@  %@%@",@"Anmerkungen vom ",heuteDatumString,@"\r\r"];
    
-   //Font für Titelzeile
+   //Font fuer Titelzeile
    NSFont* TitelFont;
    TitelFont=[NSFont fontWithName:@"Helvetica" size: 14];
    
-   //Stil für Titelzeile
+   //Stil fuer Titelzeile
    NSMutableParagraphStyle* TitelStil=[[NSMutableParagraphStyle alloc]init];
    [TitelStil setTabStops:[NSArray array]];//default weg
    NSTextTab* TitelTab1=[[NSTextTab alloc]initWithType:NSLeftTabStopType location:90];
    
-   //Stil für Abstand12
+   //Stil fuer Abstand12
    NSMutableParagraphStyle* Abstand12Stil=[[NSMutableParagraphStyle alloc]init];
    NSFont* Abstand12Font=[NSFont fontWithName:@"Helvetica" size: 12];
    NSMutableAttributedString* attrAbstand12String=[[NSMutableAttributedString alloc] initWithString:@" \r"];
@@ -2152,7 +2152,7 @@ typedef NS_ENUM(NSInteger, A)
    
    [TitelStil addTabStop:TitelTab1];
    
-   //Attr-String für Titelzeile zusammensetzen
+   //Attr-String fuer Titelzeile zusammensetzen
    NSMutableAttributedString* attrTitelString=[[NSMutableAttributedString alloc] initWithString:KopfString];
    [attrTitelString addAttribute:NSParagraphStyleAttributeName value:TitelStil range:NSMakeRange(0,[KopfString length])];
    [attrTitelString addAttribute:NSFontAttributeName value:TitelFont range:NSMakeRange(0,[KopfString length])];
@@ -2212,7 +2212,7 @@ typedef NS_ENUM(NSInteger, A)
             NSString* titel=@"Titel:";
             //char * tb=[titel lossyCString];
             const char * tb=[titel cStringUsingEncoding:NSMacOSRomanStringEncoding];
-            int Titelbreite=strlen(tb);//Minimalbreite für Tabellenkopf von Titel
+            int Titelbreite=strlen(tb);//Minimalbreite fuer Tabellenkopf von Titel
             if (Titelbreite>maxTitelbreite)
             {
                maxTitelbreite=Titelbreite;
@@ -2222,7 +2222,7 @@ typedef NS_ENUM(NSInteger, A)
             //NSString* name=NSLocalizedString(@"Name",@"Name:");
             //char * nb=[name lossyCString];
             const char * nb=[name cStringUsingEncoding:NSMacOSRomanStringEncoding];
-            int Namenbreite=strlen(nb);//Minimalbreite für Tabellenkopf von Name
+            int Namenbreite=strlen(nb);//Minimalbreite fuer Tabellenkopf von Name
             if (Namenbreite>maxNamenbreite)
             {
                maxNamenbreite=Namenbreite;
@@ -2292,7 +2292,7 @@ typedef NS_ENUM(NSInteger, A)
       }
       
       
-      //Font für Projektzeile
+      //Font fuer Projektzeile
       NSFont* ProjektFont;
       ProjektFont=[NSFont fontWithName:@"Helvetica" size: 12];
       
@@ -2301,13 +2301,13 @@ typedef NS_ENUM(NSInteger, A)
       
       NSString* ProjektKopfString=[NSString stringWithFormat:@"%@    %@%@",ProjektString,ProjektTitel,@"\r"];
       
-      //Stil für Projektzeile
+      //Stil fuer Projektzeile
       NSMutableParagraphStyle* ProjektStil=[[NSMutableParagraphStyle alloc]init];
       [ProjektStil setTabStops:[NSArray array]];//default weg
       NSTextTab* ProjektTab1=[[NSTextTab alloc]initWithType:NSLeftTabStopType location:150];
       [ProjektStil addTabStop:ProjektTab1];
       
-      //Attr-String für Projektzeile zusammensetzen
+      //Attr-String fuer Projektzeile zusammensetzen
       NSMutableAttributedString* attrProjektString=[[NSMutableAttributedString alloc] initWithString:ProjektKopfString];
       [attrProjektString addAttribute:NSParagraphStyleAttributeName value:ProjektStil range:NSMakeRange(0,[ProjektKopfString length])];
       [attrProjektString addAttribute:NSFontAttributeName value:ProjektFont range:NSMakeRange(0,[ProjektKopfString length])];
@@ -2315,7 +2315,7 @@ typedef NS_ENUM(NSInteger, A)
       //Projektzeile einsetzen
       [[KommentarView textStorage]appendAttributedString:attrProjektString];
       
-      //Stil für Abstand1
+      //Stil fuer Abstand1
       NSMutableParagraphStyle* Abstand1Stil=[[NSMutableParagraphStyle alloc]init];
       NSFont* Abstand1Font=[NSFont fontWithName:@"Helvetica" size: 6];
       NSMutableAttributedString* attrAbstand1String=[[NSMutableAttributedString alloc] initWithString:@" \r"];
@@ -2331,7 +2331,7 @@ typedef NS_ENUM(NSInteger, A)
       }
       else //Keine Kommentare in diesem Projekt
       {
-         TextString=(NSMutableString*)@"Keine Kommentare für dieses Projekt";
+         TextString=(NSMutableString*)@"Keine Kommentare fuer dieses Projekt";
       }
       
       
@@ -2440,7 +2440,7 @@ typedef NS_ENUM(NSInteger, A)
             [attrKopfString addAttribute:NSFontAttributeName value:TextFont range:NSMakeRange(0,[TabellenkopfString length])];
             [[KommentarView textStorage]appendAttributedString:attrKopfString];
             
-            //Stil für Abstand2
+            //Stil fuer Abstand2
             NSMutableParagraphStyle* Abstand2Stil=[[NSMutableParagraphStyle alloc]init];
             NSFont* Abstand2Font=[NSFont fontWithName:@"Helvetica" size: 2];
             NSMutableAttributedString* attrAbstand2String=[[NSMutableAttributedString alloc] initWithString:@" \r"];
@@ -2605,7 +2605,7 @@ typedef NS_ENUM(NSInteger, A)
 {
    NSArray* tempMarkArray=[derKommentarString componentsSeparatedByString:@"\r"];
    //NSLog(@"tempMarkVon: anz Components: %d",[tempMarkArray count]);
-   if ([tempMarkArray count]==6)//noch keine Zeile für Mark
+   if ([tempMarkArray count]==6)//noch keine Zeile fuer Mark
    {
       NSString* tempKommentarString=[tempMarkArray objectAtIndex:5];
       return [tempMarkArray objectAtIndex:5];
@@ -2626,7 +2626,7 @@ typedef NS_ENUM(NSInteger, A)
       //NSLog(@"******  tempKommentarString: %@", tempKommentarString);
       
       return tempKommentarString;
-   }//noch keine Zeile für Mark
+   }//noch keine Zeile fuer Mark
    else if ([tempMarkArray count]==8)//neue version von Kommentar
    {
       NSString* tempKommentarString=[tempMarkArray objectAtIndex:7];
@@ -3063,13 +3063,13 @@ typedef NS_ENUM(NSInteger, A)
             
             NSArray* LeserArray=[self LeserArrayVonTitel:[PopAMenu  titleOfSelectedItem] anProjektPfad:ProjektPfadOptionString];
             //NSLog(@"Komm.Not.Aktion LeserArray: %@	OptionAString: %@  OptionBString. %@",	[LeserArray description],[PopAMenu  titleOfSelectedItem],[PopBMenu  titleOfSelectedItem]);
-            if ([LeserArray count]==1)//Nur ein Leser für diesen Titel
+            if ([LeserArray count]==1)//Nur ein Leser fuer diesen Titel
             {
-               [self setPopBMenu:LeserArray erstesItem:NULL aktuell:NULL mitPrompt:@"für Leser:"];
+               [self setPopBMenu:LeserArray erstesItem:NULL aktuell:NULL mitPrompt:@"fuer Leser:"];
             }
             else
             {
-               [self setPopBMenu:LeserArray erstesItem:alle aktuell:NULL mitPrompt:@"für Leser:"];
+               [self setPopBMenu:LeserArray erstesItem:alle aktuell:NULL mitPrompt:@"fuer Leser:"];
             }
             
             
@@ -3130,7 +3130,7 @@ typedef NS_ENUM(NSInteger, A)
                {
                   NSMutableArray* LeserArray=[[self LeserArrayVonTitel:[PopAMenu  titleOfSelectedItem] anProjektPfad:ProjektPfadOptionString]mutableCopy];
                   //NSLog(@"alleVonTitelKommentarOption vor .DS: LeserArray: %@	[PopAMenu  titleOfSelectedItem]: %@  OptionBString. %@",	[LeserArray description],[PopAMenu  titleOfSelectedItem],[PopBMenu  titleOfSelectedItem]);
-                  if ([LeserArray count]>0)//ES HAT LESER MIT KOMMENTAR FÜR DIESENJ TITEL
+                  if ([LeserArray count]>0)//ES HAT LESER MIT KOMMENTAR FueR DIESENJ TITEL
                   {
                      
                      if ([[LeserArray objectAtIndex:0] hasPrefix:@".DS"]) //Unsichtbare Ordner
@@ -3140,13 +3140,13 @@ typedef NS_ENUM(NSInteger, A)
                      }
                      
                      //NSLog(@"alleVonTitelKommentarOption: LeserArray: %@	[PopAMenu  titleOfSelectedItem]: %@  OptionBString. %@",	[LeserArray description],[PopAMenu  titleOfSelectedItem],[PopBMenu  titleOfSelectedItem]);
-                     if ([LeserArray count]==1)//Nur ein Leser für diesen Titel
+                     if ([LeserArray count]==1)//Nur ein Leser fuer diesen Titel
                      {
-                        [self setPopBMenu:LeserArray erstesItem:NULL aktuell:NULL mitPrompt:@"für Leser:"];
+                        [self setPopBMenu:LeserArray erstesItem:NULL aktuell:NULL mitPrompt:@"fuer Leser:"];
                      }
                      else
                      {
-                        [self setPopBMenu:LeserArray erstesItem:alle aktuell:NULL mitPrompt:@"für Leser:"];
+                        [self setPopBMenu:LeserArray erstesItem:alle aktuell:NULL mitPrompt:@"fuer Leser:"];
                      }
                   }//Count>0
                }
@@ -3346,7 +3346,7 @@ typedef NS_ENUM(NSInteger, A)
    
    //NSLog(@"KommentarNotificationAktion vor setKommentar");
    //NSLog(@"\n+++++++++++\n˙KommentarNotificationAktion tempProjektDicArray: %@%@%@",@"\r",[tempProjektDicArray description],@"\r");
-   //NSLog(@"\nKommentarNotificationAktion ProjektPfadArray für create: %@%@%@",@"\r",[tempProjektDicArray valueForKey:@"projektpfad"],@"\r");
+   //NSLog(@"\nKommentarNotificationAktion ProjektPfadArray fuer create: %@%@%@",@"\r",[tempProjektDicArray valueForKey:@"projektpfad"],@"\r");
    
    NSArray* KommentarStringArray=[self createKommentarStringArrayWithProjektPfadArray:[tempProjektDicArray valueForKey:@"projektpfad"]];
    
@@ -3541,16 +3541,16 @@ typedef NS_ENUM(NSInteger, A)
    
    NSString* KopfString=[NSString stringWithFormat:@"%@  %@%@",tempTitelString,heuteDatumString,@"\r\r"];
    
-   //Font für Titelzeile
+   //Font fuer Titelzeile
    NSFont* TitelFont;
    TitelFont=[NSFont fontWithName:@"Helvetica" size: 14];
    
-   //Stil für Titelzeile
+   //Stil fuer Titelzeile
    NSMutableParagraphStyle* TitelStil=[[NSMutableParagraphStyle alloc]init];
    [TitelStil setTabStops:[NSArray array]];//default weg
    NSTextTab* TitelTab1=[[NSTextTab alloc]initWithType:NSLeftTabStopType location:90];
    
-   //Stil für Abstand12
+   //Stil fuer Abstand12
    NSMutableParagraphStyle* Abstand12Stil=[[NSMutableParagraphStyle alloc]init];
    NSFont* Abstand12Font=[NSFont fontWithName:@"Helvetica" size: 12];
    NSMutableAttributedString* attrAbstand12String=[[NSMutableAttributedString alloc] initWithString:@" \r"];
@@ -3561,7 +3561,7 @@ typedef NS_ENUM(NSInteger, A)
    
    [TitelStil addTabStop:TitelTab1];
    
-   //Attr-String für Titelzeile zusammensetzen
+   //Attr-String fuer Titelzeile zusammensetzen
    NSMutableAttributedString* attrTitelString=[[NSMutableAttributedString alloc] initWithString:KopfString];
    [attrTitelString addAttribute:NSParagraphStyleAttributeName value:TitelStil range:NSMakeRange(0,[KopfString length])];
    [attrTitelString addAttribute:NSFontAttributeName value:TitelFont range:NSMakeRange(0,[KopfString length])];
@@ -3617,7 +3617,7 @@ typedef NS_ENUM(NSInteger, A)
             NSString* titel=@"Titel:";
             //char * tb=[titel lossyCString];
             const char * tb=[titel cStringUsingEncoding:NSMacOSRomanStringEncoding];
-            double Titelbreite=strlen(tb);//Minimalbreite für Tabellenkopf von Titel
+            double Titelbreite=strlen(tb);//Minimalbreite fuer Tabellenkopf von Titel
             if (Titelbreite>maxTitelbreite)
             {
                maxTitelbreite=Titelbreite;
@@ -3625,7 +3625,7 @@ typedef NS_ENUM(NSInteger, A)
             NSString* name=@"Name:";
             //char * nb=[name lossyCString];
             const char * nb=[name cStringUsingEncoding:NSMacOSRomanStringEncoding];
-            double Namenbreite=strlen(nb);//Minimalbreite für Tabellenkopf von Name
+            double Namenbreite=strlen(nb);//Minimalbreite fuer Tabellenkopf von Name
             if (Namenbreite>maxNamenbreite)
             {
                maxNamenbreite=Namenbreite;
@@ -3694,20 +3694,20 @@ typedef NS_ENUM(NSInteger, A)
       }
       
       
-      //Font für Projektzeile
+      //Font fuer Projektzeile
       NSFont* ProjektFont;
       ProjektFont=[NSFont fontWithName:@"Helvetica" size: 12];
       
       NSString* ProjektString=@"Projekt: ";
       NSString* ProjektKopfString=[NSString stringWithFormat:@"%@    %@%@",ProjektString,ProjektTitel,@"\r"];
       
-      //Stil für Projektzeile
+      //Stil fuer Projektzeile
       NSMutableParagraphStyle* ProjektStil=[[NSMutableParagraphStyle alloc]init];
       [ProjektStil setTabStops:[NSArray array]];//default weg
       NSTextTab* ProjektTab1=[[NSTextTab alloc]initWithType:NSLeftTabStopType location:150];
       [ProjektStil addTabStop:ProjektTab1];
       
-      //Attr-String für Projektzeile zusammensetzen
+      //Attr-String fuer Projektzeile zusammensetzen
       NSMutableAttributedString* attrProjektString=[[NSMutableAttributedString alloc] initWithString:ProjektKopfString];
       [attrProjektString addAttribute:NSParagraphStyleAttributeName value:ProjektStil range:NSMakeRange(0,[ProjektKopfString length])];
       [attrProjektString addAttribute:NSFontAttributeName value:ProjektFont range:NSMakeRange(0,[ProjektKopfString length])];
@@ -3715,7 +3715,7 @@ typedef NS_ENUM(NSInteger, A)
       //Projektzeile einsetzen
       [[DruckKommentarView textStorage]appendAttributedString:attrProjektString];
       
-      //Stil für Abstand1
+      //Stil fuer Abstand1
       NSMutableParagraphStyle* Abstand1Stil=[[NSMutableParagraphStyle alloc]init];
       NSFont* Abstand1Font=[NSFont fontWithName:@"Helvetica" size: 6];
       NSMutableAttributedString* attrAbstand1String=[[NSMutableAttributedString alloc] initWithString:@" \r"];
@@ -3731,7 +3731,7 @@ typedef NS_ENUM(NSInteger, A)
       }
       else //Keine Kommentare in diesem Projekt
       {
-         TextString=(NSMutableString*)@"Keine Kommentare für dieses Projekt";
+         TextString=(NSMutableString*)@"Keine Kommentare fuer dieses Projekt";
       }
       
       
@@ -3844,7 +3844,7 @@ typedef NS_ENUM(NSInteger, A)
             [attrKopfString addAttribute:NSFontAttributeName value:TextFont range:NSMakeRange(0,[TabellenkopfString length])];
             [[DruckKommentarView textStorage]appendAttributedString:attrKopfString];
             
-            //Stil für Abstand2
+            //Stil fuer Abstand2
             NSMutableParagraphStyle* Abstand2Stil=[[NSMutableParagraphStyle alloc]init];
             NSFont* Abstand2Font=[NSFont fontWithName:@"Helvetica" size: 2];
             NSMutableAttributedString* attrAbstand2String=[[NSMutableAttributedString alloc] initWithString:@" \r"];

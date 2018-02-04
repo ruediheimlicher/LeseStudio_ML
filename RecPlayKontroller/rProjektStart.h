@@ -24,7 +24,7 @@
 - (IBAction)reportClose:(id)sender;
 - (IBAction)reportCancel:(id)sender;
 - (IBAction)reportNeuesProjekt:(id)sender;
-- (IBAction)reportHelp:(id)sender;
+//- (IBAction)reportHelp:(id)sender;
 
 - (void)setProjektArray:(NSArray*)derArray;
 - (void)setRecorderTaste:(int)derStatus;
