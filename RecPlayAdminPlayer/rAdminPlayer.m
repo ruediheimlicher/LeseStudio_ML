@@ -1264,7 +1264,7 @@ const short kRecPlayUmgebung=0;
 	[AdminNamenfeld setStringValue: Leser];
 	//[Leser release];
 	NSString* Ziel=[dieAufnahme stringByDeletingPathExtension];
-   int Aufnahmenummer = [self AufnahmeNummerVon:Ziel];
+   long Aufnahmenummer = [self AufnahmeNummerVon:Ziel];
    [AdminNummerfeld setIntValue:Aufnahmenummer];
 	[AdminTitelfeld setStringValue:[self AufnahmeTitelVon:Ziel]];
 	//NSLog(@"setKommentarFuerLeser:%@		FuerAufnahme:%@",derLeser, dieAufnahme);
@@ -3585,10 +3585,19 @@ const short kRecPlayUmgebung=0;
 									[Warnung setMessageText:@"Fehler beim Umnummerieren des Kommentars"];
 									[Warnung setInformativeText:FehlerString];
 									[Warnung setAlertStyle:NSWarningAlertStyle];
+                           [Warnung beginSheetModalForWindow:AdminFenster completionHandler:^(NSModalResponse returnCode) {
+                              if (returnCode == NSAlertSecondButtonReturn) {
+                                 NSLog(@"Umnumerieren erfolglos!");
+                                 return;
+                              }
+                              
+                              NSLog(@"This project was deleted!");
+                           }];
+/*
 									[Warnung beginSheetModalForWindow:AdminFenster 
 														modalDelegate:nil
 													   didEndSelector:nil
-														  contextInfo:nil];
+														  contextInfo:nil];*/
 									
 									//int Antwort=NSRunAlertPanel(@"", FehlerString,@"OK", NULL,NULL);
 									return;
@@ -4233,67 +4242,6 @@ NSNumber* UmgebungNumber=[[note userInfo]objectForKey:@"Umgebung"];
 
 }
 
-- (OSErr)ExportMovieVonPfad:(NSString*) derAufnahmePfad
-{	
-	OSErr erfolg=0;
-	FSSpec	*tempExportFSSpec;
-	FSRef tempExportRef;
-	short status;
-	UniChar buffer[255]; // HFS+ filename max is 255
-	
-	NSFileManager *Filemanager=[NSFileManager defaultManager];
-	NSString* ExportAufnahmeName=[[derAufnahmePfad copy] lastPathComponent];
-	//NSLog(@"ExportAufnahmeName: %@",ExportAufnahmeName);
-	[ExportAufnahmeName getCharacters:buffer];
-	//NSString* tempExportOrdnerPfad=[NSString stringWithString:NSHomeDirectory()];
-	//tempExportOrdnerPfad=[ExportOrdnerPfad stringByAppendingPathComponent:@"Documents"];
-	NSString* tempExportOrdnerPfad=[AdminLeseboxPfad stringByDeletingLastPathComponent];
-	status = FSPathMakeRef((UInt8*)[tempExportOrdnerPfad fileSystemRepresentation],  &tempExportRef, NULL);
-	
-	// QTKit
-	NSError* loadErr;
-	NSURL *movieURL = [NSURL fileURLWithPath:derAufnahmePfad];
-//	QTMovie* tempMovie= [[QTMovie alloc]initWithURL:movieURL error:&loadErr];
-	if (loadErr)
-	{
-		NSAlert *theAlert = [NSAlert alertWithError:loadErr];
-		[theAlert runModal]; // Ignore return value.
-	}
-   /*
-	if (!tempMovie)
-		//NSLog(@"Kein Movie da");
-	// retrieve the QuickTime-style movie (type "Movie" from QuickTime/Movies.h) 
-	Movie tempExportMovie =[tempMovie quickTimeMovie];
-	
-	long exportFlags = showUserSettingsDialog |
-	movieToFileOnlyExport |
-	movieFileSpecValid |
-	createMovieFileDeleteCurFile;
-	
-	// If the movie is currently playing stop it
-	if (GetMovieRate(tempExportMovie))
-		StopMovie(tempExportMovie);
-	
-	// use the default progress procedure, if any
-	SetMovieProgressProc(tempExportMovie,					// the movie specifier
-								(MovieProgressUPP)-1L,		// pointer to a progress function; -1 indicades default
-								0);						// reference constant
-	
-	// export the movie into a file
-	ConvertMovieToFile(tempExportMovie,					// the movie to convert
-							 NULL,						// all tracks in the movie
-							 tempExportFSSpec,					// the output file
-							 0,							// the output file type
-							 0,							// the output file creator
-							 smSystemScript,				// the script
-							 NULL, 						// no resource ID to be returned
-							 exportFlags,					// no flags
-							 NULL);						// no specific component
-	//NSOKButton
-    
-    */
-	return erfolg;
-}//Export
 
 
 - (IBAction) Fensterschliessen
@@ -4533,7 +4481,7 @@ if (entfernenOK==0)//allesOK
 }
 
 
-- (int)AufnahmeNummerVon:(NSString*) dieAufnahme
+- (long)AufnahmeNummerVon:(NSString*) dieAufnahme
 {
    NSString* tempAufnahme=[dieAufnahme copy];
    int posLeerstelle1=0;

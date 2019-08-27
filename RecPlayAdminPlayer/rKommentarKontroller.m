@@ -1545,7 +1545,7 @@ return KommentareMitTitelVonLeserArray;
 							NSString* tempKommentarPfad=[tempLeserKommentarPfad stringByAppendingPathComponent:eineAufnahme];
 							if ([Filemanager fileExistsAtPath:tempKommentarPfad])//Kommentar fuer diese Aufnahme ist da)
 							  {
-								  int n = (int)[self AufnahmeNummerVon:eineAufnahme];
+								  long n = [self AufnahmeNummerVon:eineAufnahme];
 								  if (n>letzte)
 									{
 									  letzte=n;

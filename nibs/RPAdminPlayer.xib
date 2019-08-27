@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -45,11 +44,11 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="NSPanel">
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="574" height="801"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="574" height="801"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -58,11 +57,11 @@
                         <rect key="frame" x="11" y="375" width="557" height="332"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView" ambiguous="YES" id="2fL-yX-bG1">
-                            <rect key="frame" x="2" y="2" width="553" height="328"/>
+                            <rect key="frame" x="3" y="3" width="551" height="326"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <popUpButton fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="QJL-k4-w75">
-                                    <rect key="frame" x="15" y="288" width="165" height="26"/>
+                                    <rect key="frame" x="15" y="286" width="165" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="bevel" title="Projekt wählen:" bezelStyle="regularSquare" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="Gvw-3i-q2V" id="dWp-0z-XXK">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -77,8 +76,8 @@
                                         <action selector="setNeuesAdminProjekt:" target="-2" id="KiQ-Mn-hDW"/>
                                     </connections>
                                 </popUpButton>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOU-9m-EjB">
-                                    <rect key="frame" x="207" y="287" width="320" height="29"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOU-9m-EjB">
+                                    <rect key="frame" x="207" y="285" width="320" height="29"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" id="aqZ-45-YeA">
                                         <font key="font" metaFont="system" size="24"/>
@@ -87,7 +86,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <tabView identifier="1" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XvE-cx-V7B">
-                                    <rect key="frame" x="-2" y="13" width="540" height="272"/>
+                                    <rect key="frame" x="-2" y="11" width="540" height="272"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <tabViewItems>
@@ -135,7 +134,7 @@
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </tableColumn>
-                                                                        <tableColumn identifier="aufnahmen" width="190.4130859375" minWidth="65.4130859375" maxWidth="1000" id="6C0-a4-g04">
+                                                                        <tableColumn identifier="aufnahmen" width="189.9130859375" minWidth="65.4130859375" maxWidth="1000" id="6C0-a4-g04">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Aufnahmen">
                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -194,7 +193,7 @@
                                                             <action selector="reportAufnahmenAuswahlOption:" target="-2" id="uRe-0z-4PO"/>
                                                         </connections>
                                                     </matrix>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-sQ-tUf">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-sQ-tUf">
                                                         <rect key="frame" x="440" y="188" width="78" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Anzeigen:" id="eiU-uX-Gik">
@@ -219,7 +218,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" headerView="1w8-Df-bL7" id="A7I-ih-504">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="362" height="114"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="362" height="108"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -327,7 +326,7 @@
                                                             <action selector="setAufnahmenVonPopLeser:" target="-2" id="h6K-2D-SzX"/>
                                                         </connections>
                                                     </popUpButton>
-                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="DCZ-Pf-pfA">
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="DCZ-Pf-pfA">
                                                         <rect key="frame" x="409" y="175" width="78" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="Anzeigen:" id="tLw-mr-Vl7">
@@ -349,11 +348,11 @@
                         <rect key="frame" x="17" y="181" width="530" height="178"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView" id="a5D-XC-2sV">
-                            <rect key="frame" x="2" y="2" width="526" height="157"/>
+                            <rect key="frame" x="3" y="3" width="524" height="156"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="12" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29h-TH-4o7">
-                                    <rect key="frame" x="210" y="9" width="58" height="22"/>
+                                <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="29h-TH-4o7">
+                                    <rect key="frame" x="210" y="8" width="58" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" completes="NO" numberOfVisibleItems="9" id="UAR-8x-BlQ">
                                         <font key="font" metaFont="smallSystem"/>
@@ -373,8 +372,8 @@
                                         </objectValues>
                                     </comboBoxCell>
                                 </comboBox>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="35" translatesAutoresizingMaskIntoConstraints="NO" id="n6b-qA-kxL">
-                                    <rect key="frame" x="166" y="13" width="39" height="13"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="35" translatesAutoresizingMaskIntoConstraints="NO" id="n6b-qA-kxL">
+                                    <rect key="frame" x="166" y="12" width="39" height="13"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Note:" id="J7s-ug-XWW">
                                         <font key="font" metaFont="label"/>
@@ -383,15 +382,16 @@
                                     </textFieldCell>
                                 </textField>
                                 <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySN-Ls-cW7">
-                                    <rect key="frame" x="88" y="33" width="430" height="56"/>
+                                    <rect key="frame" x="88" y="32" width="430" height="56"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <clipView key="contentView" ambiguous="YES" id="2uL-ov-zju">
                                         <rect key="frame" x="1" y="1" width="413" height="54"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <textView ambiguous="YES" editable="NO" selectable="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" spellingCorrection="YES" smartInsertDelete="YES" id="nBd-ww-hlt">
+                                            <textView ambiguous="YES" editable="NO" selectable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" spellingCorrection="YES" smartInsertDelete="YES" id="nBd-ww-hlt">
                                                 <rect key="frame" x="0.0" y="0.0" width="413" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" red="0.9098039269" green="1" blue="0.91372549530000002" alpha="1" colorSpace="deviceRGB"/>
                                                 <size key="minSize" width="413" height="54"/>
                                                 <size key="maxSize" width="843" height="10000000"/>
@@ -408,8 +408,8 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                 </scrollView>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssi-6S-WvC">
-                                    <rect key="frame" x="88" y="126" width="287" height="22"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ssi-6S-WvC">
+                                    <rect key="frame" x="88" y="125" width="270" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" id="Bts-sm-Rrf">
                                         <font key="font" metaFont="system"/>
@@ -417,8 +417,8 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="39" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-9k-xRo">
-                                    <rect key="frame" x="43" y="128" width="43" height="13"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="39" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-9k-xRo">
+                                    <rect key="frame" x="43" y="127" width="43" height="13"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Name:" id="i0S-UQ-HHY">
                                         <font key="font" metaFont="label"/>
@@ -426,8 +426,8 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-wO-jZe">
-                                    <rect key="frame" x="395" y="95" width="24" height="22"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdu-wO-jZe">
+                                    <rect key="frame" x="395" y="94" width="24" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" id="TYM-XW-ZQ3">
                                         <font key="font" metaFont="system"/>
@@ -435,8 +435,8 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-15-z2g">
-                                    <rect key="frame" x="88" y="96" width="233" height="22"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-15-z2g">
+                                    <rect key="frame" x="88" y="95" width="233" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" id="i6I-oV-ase">
                                         <font key="font" metaFont="system"/>
@@ -444,8 +444,8 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="39" translatesAutoresizingMaskIntoConstraints="NO" id="8ze-28-d58">
-                                    <rect key="frame" x="43" y="98" width="43" height="13"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="39" translatesAutoresizingMaskIntoConstraints="NO" id="8ze-28-d58">
+                                    <rect key="frame" x="43" y="97" width="43" height="13"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Titel:" id="ca6-bv-6Uv">
                                         <font key="font" metaFont="label"/>
@@ -453,8 +453,8 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="w10-Uw-g3J">
-                                    <rect key="frame" x="339" y="97" width="51" height="15"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="w10-Uw-g3J">
+                                    <rect key="frame" x="339" y="96" width="51" height="15"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Nummer:" id="2Tm-kE-MKm">
                                         <font key="font" metaFont="label"/>
@@ -462,8 +462,8 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="76" translatesAutoresizingMaskIntoConstraints="NO" id="7LR-sn-jra">
-                                    <rect key="frame" x="6" y="73" width="80" height="13"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="76" translatesAutoresizingMaskIntoConstraints="NO" id="7LR-sn-jra">
+                                    <rect key="frame" x="6" y="72" width="80" height="13"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Anmerkungen" id="dBH-R6-6HE">
                                         <font key="font" metaFont="label"/>
@@ -471,8 +471,8 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="UQK-gd-GpD">
-                                    <rect key="frame" x="391" y="129" width="47" height="13"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="UQK-gd-GpD">
+                                    <rect key="frame" x="365" y="128" width="47" height="13"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Datum:" id="Yz7-85-7eH">
                                         <font key="font" metaFont="label"/>
@@ -480,8 +480,8 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="73" translatesAutoresizingMaskIntoConstraints="NO" id="YMd-np-0tz">
-                                    <rect key="frame" x="9" y="13" width="77" height="15"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="73" translatesAutoresizingMaskIntoConstraints="NO" id="YMd-np-0tz">
+                                    <rect key="frame" x="9" y="12" width="77" height="15"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Bewertung" id="AHG-ZM-PTC">
                                         <font key="font" metaFont="label"/>
@@ -490,7 +490,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="h4B-tV-BHj">
-                                    <rect key="frame" x="95" y="10" width="48" height="22"/>
+                                    <rect key="frame" x="95" y="9" width="48" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="borderAndBezel" inset="2" selectedItem="TsI-rp-UlE" id="ZpY-g6-BJk">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -506,7 +506,7 @@
                                     </popUpButtonCell>
                                 </popUpButton>
                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73l-fT-fQW">
-                                    <rect key="frame" x="447" y="-1" width="69" height="26"/>
+                                    <rect key="frame" x="447" y="-2" width="69" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Best" bezelStyle="regularSquare" imagePosition="right" alignment="right" inset="2" id="G1o-xt-UN7">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -517,7 +517,7 @@
                                     </connections>
                                 </button>
                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VZ5-gj-AiH">
-                                    <rect key="frame" x="453" y="91" width="64" height="26"/>
+                                    <rect key="frame" x="453" y="90" width="64" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Mark" bezelStyle="regularSquare" imagePosition="right" alignment="right" inset="2" id="6d8-v8-BDt">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -528,15 +528,15 @@
                                     </connections>
                                 </button>
                                 <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdh-OH-fN9">
-                                    <rect key="frame" x="393" y="147" width="91" height="24"/>
+                                    <rect key="frame" x="393" y="146" width="91" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="LehrerMark" bezelStyle="regularSquare" imagePosition="right" alignment="right" enabled="NO" inset="2" id="1B2-Ka-KG1">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
                                 </button>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-dY-y2R">
-                                    <rect key="frame" x="444" y="126" width="78" height="22"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-dY-y2R">
+                                    <rect key="frame" x="418" y="125" width="104" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" id="guk-KX-FOg">
                                         <font key="font" metaFont="system"/>
@@ -555,7 +555,7 @@
                             <rect key="frame" x="3" y="3" width="524" height="69"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scX-Yc-Ux4">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scX-Yc-Ux4">
                                     <rect key="frame" x="464" y="27" width="44" height="16"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" id="7Bh-zf-SpX">
@@ -623,7 +623,7 @@
                                     <rect key="frame" x="170" y="51" width="337" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </customView>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="97" translatesAutoresizingMaskIntoConstraints="NO" id="83N-7O-YId">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="97" translatesAutoresizingMaskIntoConstraints="NO" id="83N-7O-YId">
                                     <rect key="frame" x="-9" y="36" width="101" height="19"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Aufnahmedauer:" id="ugI-Pn-hRS">
@@ -632,7 +632,7 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ln-Fs-ivx">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ln-Fs-ivx">
                                     <rect key="frame" x="94" y="39" width="61" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" id="wBj-vd-hHF">
@@ -641,7 +641,7 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="41" translatesAutoresizingMaskIntoConstraints="NO" id="M62-F7-xQy">
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="41" translatesAutoresizingMaskIntoConstraints="NO" id="M62-F7-xQy">
                                     <rect key="frame" x="456" y="12" width="45" height="13"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Zeit:" id="2II-Qq-KYA">
@@ -699,11 +699,11 @@
                         <rect key="frame" x="11" y="709" width="557" height="74"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView" ambiguous="YES" id="tuU-1J-qYD">
-                            <rect key="frame" x="2" y="2" width="553" height="70"/>
+                            <rect key="frame" x="3" y="3" width="551" height="68"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="oUV-id-EO0">
-                                    <rect key="frame" x="7" y="20" width="272" height="31"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="oUV-id-EO0">
+                                    <rect key="frame" x="7" y="18" width="272" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Lesestudio" id="2ww-ax-vPG">
                                         <font key="font" metaFont="system"/>
@@ -712,15 +712,15 @@
                                     </textFieldCell>
                                 </textField>
                                 <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GD0-Wc-a90">
-                                    <rect key="frame" x="246" y="10" width="103" height="32"/>
+                                    <rect key="frame" x="246" y="8" width="103" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="bevel" title="Kommentar" bezelStyle="regularSquare" imagePosition="right" alignment="center" borderStyle="border" inset="2" id="zyO-XO-cSQ">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                 </button>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="176" translatesAutoresizingMaskIntoConstraints="NO" id="lh2-ED-fq6">
-                                    <rect key="frame" x="362" y="21" width="180" height="30"/>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="176" translatesAutoresizingMaskIntoConstraints="NO" id="lh2-ED-fq6">
+                                    <rect key="frame" x="362" y="19" width="180" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Admin" id="GzZ-Ya-Jji">
                                         <font key="font" metaFont="system"/>
@@ -745,7 +745,7 @@
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
 c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MTcsIDE3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
-HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERIeTU0AKgAABIzw8PD/8PDw
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERI2TU0AKgAABIzw8PD/8PDw
 //Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw
 //Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw
 //Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw
@@ -765,71 +765,71 @@ HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERIeTU0AKgAABIzw8PD/8PDw
 //Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw
 //Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/eHh4//Dw8P/w8PD/8PDw
 //Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P94eHj/8PDw
-//Dw8P/w8PD/AA4BAAADAAAAAQARAAABAQADAAAAAQARAAABAgADAAAABAAABToBAwADAAAAAQABAAAB
-BgADAAAAAQACAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAABFgADAAAAAQARAAAB
-FwAEAAAAAQAABIQBHAADAAAAAQABAAABUgADAAAAAQABAAABUwADAAAABAAABUKHcwAHAAAM1AAABUoA
-AAAAAAgACAAIAAgAAQABAAEAAQAADNRhcHBsAhAAAG1udHJSR0IgWFlaIAffAAQAEAALAAMAAWFjc3BB
-UFBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWRlc2MAAAFQAAAAYmRzY20AAAG0AAABvGNwcnQA
-AANwAAAAI3d0cHQAAAOUAAAAFHJYWVoAAAOoAAAAFGdYWVoAAAO8AAAAFGJYWVoAAAPQAAAAFHJUUkMA
-AAPkAAAIDGFhcmcAAAvwAAAAIHZjZ3QAAAwQAAAAMG5kaW4AAAxAAAAAPmNoYWQAAAyAAAAALG1tb2QA
-AAysAAAAKGJUUkMAAAPkAAAIDGdUUkMAAAPkAAAIDGFhYmcAAAvwAAAAIGFhZ2cAAAvwAAAAIGRlc2MA
-AAAAAAAACERpc3BsYXkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtbHVjAAAAAAAAACIAAAAMaHJIUgAAABQA
-AAGoa29LUgAAABQAAAGobmJOTwAAABQAAAGoaWQAAAAAABQAAAGoaHVIVQAAABQAAAGoY3NDWgAAABQA
-AAGoZGFESwAAABQAAAGodWtVQQAAABQAAAGoYXIAAAAAABQAAAGoaXRJVAAAABQAAAGocm9STwAAABQA
-AAGoZXNFUwAAABQAAAGoaGVJTAAAABQAAAGobmxOTAAAABQAAAGoZmlGSQAAABQAAAGoemhUVwAAABQA
-AAGodmlWTgAAABQAAAGoc2tTSwAAABQAAAGoemhDTgAAABQAAAGocnVSVQAAABQAAAGoZnJGUgAAABQA
-AAGobXMAAAAAABQAAAGoY2FFUwAAABQAAAGodGhUSAAAABQAAAGoZXNYTAAAABQAAAGoZGVERQAAABQA
-AAGoZW5VUwAAABQAAAGocHRCUgAAABQAAAGocGxQTAAAABQAAAGoZWxHUgAAABQAAAGoc3ZTRQAAABQA
-AAGodHJUUgAAABQAAAGoamFKUAAAABQAAAGocHRQVAAAABQAAAGoAFMAeQBuAGMATQBhAHMAdABlAHJ0
-ZXh0AAAAAENvcHlyaWdodCBBcHBsZSBJbmMuLCAyMDE1AABYWVogAAAAAAAA89gAAQAAAAEWCFhZWiAA
-AAAAAABwFgAAOUQAAAOjWFlaIAAAAAAAAGIaAAC3YwAAGQlYWVogAAAAAAAAJKcAAA9YAAC2gGN1cnYA
-AAAAAAAEAAAAAAUACgAPABQAGQAeACMAKAAtADIANgA7AEAARQBKAE8AVABZAF4AYwBoAG0AcgB3AHwA
-gQCGAIsAkACVAJoAnwCjAKgArQCyALcAvADBAMYAywDQANUA2wDgAOUA6wDwAPYA+wEBAQcBDQETARkB
-HwElASsBMgE4AT4BRQFMAVIBWQFgAWcBbgF1AXwBgwGLAZIBmgGhAakBsQG5AcEByQHRAdkB4QHpAfIB
-+gIDAgwCFAIdAiYCLwI4AkECSwJUAl0CZwJxAnoChAKOApgCogKsArYCwQLLAtUC4ALrAvUDAAMLAxYD
-IQMtAzgDQwNPA1oDZgNyA34DigOWA6IDrgO6A8cD0wPgA+wD+QQGBBMEIAQtBDsESARVBGMEcQR+BIwE
-mgSoBLYExATTBOEE8AT+BQ0FHAUrBToFSQVYBWcFdwWGBZYFpgW1BcUF1QXlBfYGBgYWBicGNwZIBlkG
-agZ7BowGnQavBsAG0QbjBvUHBwcZBysHPQdPB2EHdAeGB5kHrAe/B9IH5Qf4CAsIHwgyCEYIWghuCIII
-lgiqCL4I0gjnCPsJEAklCToJTwlkCXkJjwmkCboJzwnlCfsKEQonCj0KVApqCoEKmAquCsUK3ArzCwsL
-Igs5C1ELaQuAC5gLsAvIC+EL+QwSDCoMQwxcDHUMjgynDMAM2QzzDQ0NJg1ADVoNdA2ODakNww3eDfgO
-Ew4uDkkOZA5/DpsOtg7SDu4PCQ8lD0EPXg96D5YPsw/PD+wQCRAmEEMQYRB+EJsQuRDXEPURExExEU8R
-bRGMEaoRyRHoEgcSJhJFEmQShBKjEsMS4xMDEyMTQxNjE4MTpBPFE+UUBhQnFEkUahSLFK0UzhTwFRIV
-NBVWFXgVmxW9FeAWAxYmFkkWbBaPFrIW1hb6Fx0XQRdlF4kXrhfSF/cYGxhAGGUYihivGNUY+hkgGUUZ
-axmRGbcZ3RoEGioaURp3Gp4axRrsGxQbOxtjG4obshvaHAIcKhxSHHscoxzMHPUdHh1HHXAdmR3DHewe
-Fh5AHmoelB6+HukfEx8+H2kflB+/H+ogFSBBIGwgmCDEIPAhHCFIIXUhoSHOIfsiJyJVIoIiryLdIwoj
-OCNmI5QjwiPwJB8kTSR8JKsk2iUJJTglaCWXJccl9yYnJlcmhya3JugnGCdJJ3onqyfcKA0oPyhxKKIo
-1CkGKTgpaymdKdAqAio1KmgqmyrPKwIrNitpK50r0SwFLDksbiyiLNctDC1BLXYtqy3hLhYuTC6CLrcu
-7i8kL1ovkS/HL/4wNTBsMKQw2zESMUoxgjG6MfIyKjJjMpsy1DMNM0YzfzO4M/E0KzRlNJ402DUTNU01
-hzXCNf02NzZyNq426TckN2A3nDfXOBQ4UDiMOMg5BTlCOX85vDn5OjY6dDqyOu87LTtrO6o76DwnPGU8
-pDzjPSI9YT2hPeA+ID5gPqA+4D8hP2E/oj/iQCNAZECmQOdBKUFqQaxB7kIwQnJCtUL3QzpDfUPARANE
-R0SKRM5FEkVVRZpF3kYiRmdGq0bwRzVHe0fASAVIS0iRSNdJHUljSalJ8Eo3Sn1KxEsMS1NLmkviTCpM
-cky6TQJNSk2TTdxOJU5uTrdPAE9JT5NP3VAnUHFQu1EGUVBRm1HmUjFSfFLHUxNTX1OqU/ZUQlSPVNtV
-KFV1VcJWD1ZcVqlW91dEV5JX4FgvWH1Yy1kaWWlZuFoHWlZaplr1W0VblVvlXDVchlzWXSddeF3JXhpe
-bF69Xw9fYV+zYAVgV2CqYPxhT2GiYfViSWKcYvBjQ2OXY+tkQGSUZOllPWWSZedmPWaSZuhnPWeTZ+lo
-P2iWaOxpQ2maafFqSGqfavdrT2una/9sV2yvbQhtYG25bhJua27Ebx5veG/RcCtwhnDgcTpxlXHwckty
-pnMBc11zuHQUdHB0zHUodYV14XY+dpt2+HdWd7N4EXhueMx5KnmJeed6RnqlewR7Y3vCfCF8gXzhfUF9
-oX4BfmJ+wn8jf4R/5YBHgKiBCoFrgc2CMIKSgvSDV4O6hB2EgITjhUeFq4YOhnKG14c7h5+IBIhpiM6J
-M4mZif6KZIrKizCLlov8jGOMyo0xjZiN/45mjs6PNo+ekAaQbpDWkT+RqJIRknqS45NNk7aUIJSKlPSV
-X5XJljSWn5cKl3WX4JhMmLiZJJmQmfyaaJrVm0Kbr5wcnImc951kndKeQJ6unx2fi5/6oGmg2KFHobai
-JqKWowajdqPmpFakx6U4pammGqaLpv2nbqfgqFKoxKk3qamqHKqPqwKrdavprFys0K1ErbiuLa6hrxav
-i7AAsHWw6rFgsdayS7LCszizrrQltJy1E7WKtgG2ebbwt2i34LhZuNG5SrnCuju6tbsuu6e8IbybvRW9
-j74KvoS+/796v/XAcMDswWfB48JfwtvDWMPUxFHEzsVLxcjGRsbDx0HHv8g9yLzJOsm5yjjKt8s2y7bM
-Ncy1zTXNtc42zrbPN8+40DnQutE80b7SP9LB00TTxtRJ1MvVTtXR1lXW2Ndc1+DYZNjo2WzZ8dp22vvb
-gNwF3IrdEN2W3hzeot8p36/gNuC94UThzOJT4tvjY+Pr5HPk/OWE5g3mlucf56noMui86Ubp0Opb6uXr
-cOv77IbtEe2c7ijutO9A78zwWPDl8XLx//KM8xnzp/Q09ML1UPXe9m32+/eK+Bn4qPk4+cf6V/rn+3f8
-B/yY/Sn9uv5L/tz/bf//cGFyYQAAAAAAAwAAAAJmZgAA8qcAAA1ZAAAT0AAACg52Y2d0AAAAAAAAAAEA
-AQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAABuZGluAAAAAAAAADYAAKPAAABUgAAATMAA
-AJmAAAAmgAAAD0AAAFBAAABUQAACMzMAAjMzAAIzMwAAAAAAAAAAc2YzMgAAAAAAAQu3AAAFlv//81cA
-AAcpAAD91///+7f///2mAAAD2gAAwPZtbW9kAAAAAAAATC0AAAIeSEEyMMDDgoAAAAAAAAAAAAAAAAAA
-AAAA0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc18QEE5TQml0bWFwSW1hZ2VSZXCjJykqWk5TSW1hZ2VS
-ZXBYTlNPYmplY3TSJSYsLVdOU0FycmF5oiwq0iUmLzBeTlNNdXRhYmxlQXJyYXmjLywq0zIzCjQ1NldO
-U1doaXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOADNIlJjg5V05TQ29sb3KiOCrSJSY7PFdOU0ltYWdlojsq
-XxAPTlNLZXllZEFyY2hpdmVy0T9AVHJvb3SAAQAIABEAGgAjAC0AMgA3AEYATABXAF4AZQByAHkAgQCD
-AIUAigCMAI4AlwCcAKcAqQCrAK0AsgC1ALcAuQC7AL0AwgDZANsA3RL/EwQTDxMYEysTLxM6E0MTSBNQ
-E1MTWBNnE2sTchN6E4cTjBOOE5ATlROdE6ATpROtE7ATwhPFE8oAAAAAAAACAQAAAAAAAABBAAAAAAAA
-AAAAAAAAAAATzA
+//Dw8P/w8PD/ABABAAADAAAAAQARAAABAQADAAAAAQARAAABAgADAAAABAAABVIBAwADAAAAAQABAAAB
+BgADAAAAAQACAAABCgADAAAAAQABAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAAB
+FgADAAAAAQARAAABFwAEAAAAAQAABIQBHAADAAAAAQABAAABKAADAAAAAQACAAABUgADAAAAAQABAAAB
+UwADAAAABAAABVqHcwAHAAAM1AAABWIAAAAAAAgACAAIAAgAAQABAAEAAQAADNRhcHBsAhAAAG1udHJS
+R0IgWFlaIAffAAQAEAALAAMAAWFjc3BBUFBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAA
+ANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWRlc2MA
+AAFQAAAAYmRzY20AAAG0AAABvGNwcnQAAANwAAAAI3d0cHQAAAOUAAAAFHJYWVoAAAOoAAAAFGdYWVoA
+AAO8AAAAFGJYWVoAAAPQAAAAFHJUUkMAAAPkAAAIDGFhcmcAAAvwAAAAIHZjZ3QAAAwQAAAAMG5kaW4A
+AAxAAAAAPmNoYWQAAAyAAAAALG1tb2QAAAysAAAAKGJUUkMAAAPkAAAIDGdUUkMAAAPkAAAIDGFhYmcA
+AAvwAAAAIGFhZ2cAAAvwAAAAIGRlc2MAAAAAAAAACERpc3BsYXkAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABt
+bHVjAAAAAAAAACIAAAAMaHJIUgAAABQAAAGoa29LUgAAABQAAAGobmJOTwAAABQAAAGoaWQAAAAAABQA
+AAGoaHVIVQAAABQAAAGoY3NDWgAAABQAAAGoZGFESwAAABQAAAGodWtVQQAAABQAAAGoYXIAAAAAABQA
+AAGoaXRJVAAAABQAAAGocm9STwAAABQAAAGoZXNFUwAAABQAAAGoaGVJTAAAABQAAAGobmxOTAAAABQA
+AAGoZmlGSQAAABQAAAGoemhUVwAAABQAAAGodmlWTgAAABQAAAGoc2tTSwAAABQAAAGoemhDTgAAABQA
+AAGocnVSVQAAABQAAAGoZnJGUgAAABQAAAGobXMAAAAAABQAAAGoY2FFUwAAABQAAAGodGhUSAAAABQA
+AAGoZXNYTAAAABQAAAGoZGVERQAAABQAAAGoZW5VUwAAABQAAAGocHRCUgAAABQAAAGocGxQTAAAABQA
+AAGoZWxHUgAAABQAAAGoc3ZTRQAAABQAAAGodHJUUgAAABQAAAGoamFKUAAAABQAAAGocHRQVAAAABQA
+AAGoAFMAeQBuAGMATQBhAHMAdABlAHJ0ZXh0AAAAAENvcHlyaWdodCBBcHBsZSBJbmMuLCAyMDE1AABY
+WVogAAAAAAAA89gAAQAAAAEWCFhZWiAAAAAAAABwFgAAOUQAAAOjWFlaIAAAAAAAAGIaAAC3YwAAGQlY
+WVogAAAAAAAAJKcAAA9YAAC2gGN1cnYAAAAAAAAEAAAAAAUACgAPABQAGQAeACMAKAAtADIANgA7AEAA
+RQBKAE8AVABZAF4AYwBoAG0AcgB3AHwAgQCGAIsAkACVAJoAnwCjAKgArQCyALcAvADBAMYAywDQANUA
+2wDgAOUA6wDwAPYA+wEBAQcBDQETARkBHwElASsBMgE4AT4BRQFMAVIBWQFgAWcBbgF1AXwBgwGLAZIB
+mgGhAakBsQG5AcEByQHRAdkB4QHpAfIB+gIDAgwCFAIdAiYCLwI4AkECSwJUAl0CZwJxAnoChAKOApgC
+ogKsArYCwQLLAtUC4ALrAvUDAAMLAxYDIQMtAzgDQwNPA1oDZgNyA34DigOWA6IDrgO6A8cD0wPgA+wD
++QQGBBMEIAQtBDsESARVBGMEcQR+BIwEmgSoBLYExATTBOEE8AT+BQ0FHAUrBToFSQVYBWcFdwWGBZYF
+pgW1BcUF1QXlBfYGBgYWBicGNwZIBlkGagZ7BowGnQavBsAG0QbjBvUHBwcZBysHPQdPB2EHdAeGB5kH
+rAe/B9IH5Qf4CAsIHwgyCEYIWghuCIIIlgiqCL4I0gjnCPsJEAklCToJTwlkCXkJjwmkCboJzwnlCfsK
+EQonCj0KVApqCoEKmAquCsUK3ArzCwsLIgs5C1ELaQuAC5gLsAvIC+EL+QwSDCoMQwxcDHUMjgynDMAM
+2QzzDQ0NJg1ADVoNdA2ODakNww3eDfgOEw4uDkkOZA5/DpsOtg7SDu4PCQ8lD0EPXg96D5YPsw/PD+wQ
+CRAmEEMQYRB+EJsQuRDXEPURExExEU8RbRGMEaoRyRHoEgcSJhJFEmQShBKjEsMS4xMDEyMTQxNjE4MT
+pBPFE+UUBhQnFEkUahSLFK0UzhTwFRIVNBVWFXgVmxW9FeAWAxYmFkkWbBaPFrIW1hb6Fx0XQRdlF4kX
+rhfSF/cYGxhAGGUYihivGNUY+hkgGUUZaxmRGbcZ3RoEGioaURp3Gp4axRrsGxQbOxtjG4obshvaHAIc
+KhxSHHscoxzMHPUdHh1HHXAdmR3DHeweFh5AHmoelB6+HukfEx8+H2kflB+/H+ogFSBBIGwgmCDEIPAh
+HCFIIXUhoSHOIfsiJyJVIoIiryLdIwojOCNmI5QjwiPwJB8kTSR8JKsk2iUJJTglaCWXJccl9yYnJlcm
+hya3JugnGCdJJ3onqyfcKA0oPyhxKKIo1CkGKTgpaymdKdAqAio1KmgqmyrPKwIrNitpK50r0SwFLDks
+biyiLNctDC1BLXYtqy3hLhYuTC6CLrcu7i8kL1ovkS/HL/4wNTBsMKQw2zESMUoxgjG6MfIyKjJjMpsy
+1DMNM0YzfzO4M/E0KzRlNJ402DUTNU01hzXCNf02NzZyNq426TckN2A3nDfXOBQ4UDiMOMg5BTlCOX85
+vDn5OjY6dDqyOu87LTtrO6o76DwnPGU8pDzjPSI9YT2hPeA+ID5gPqA+4D8hP2E/oj/iQCNAZECmQOdB
+KUFqQaxB7kIwQnJCtUL3QzpDfUPARANER0SKRM5FEkVVRZpF3kYiRmdGq0bwRzVHe0fASAVIS0iRSNdJ
+HUljSalJ8Eo3Sn1KxEsMS1NLmkviTCpMcky6TQJNSk2TTdxOJU5uTrdPAE9JT5NP3VAnUHFQu1EGUVBR
+m1HmUjFSfFLHUxNTX1OqU/ZUQlSPVNtVKFV1VcJWD1ZcVqlW91dEV5JX4FgvWH1Yy1kaWWlZuFoHWlZa
+plr1W0VblVvlXDVchlzWXSddeF3JXhpebF69Xw9fYV+zYAVgV2CqYPxhT2GiYfViSWKcYvBjQ2OXY+tk
+QGSUZOllPWWSZedmPWaSZuhnPWeTZ+loP2iWaOxpQ2maafFqSGqfavdrT2una/9sV2yvbQhtYG25bhJu
+a27Ebx5veG/RcCtwhnDgcTpxlXHwcktypnMBc11zuHQUdHB0zHUodYV14XY+dpt2+HdWd7N4EXhueMx5
+KnmJeed6RnqlewR7Y3vCfCF8gXzhfUF9oX4BfmJ+wn8jf4R/5YBHgKiBCoFrgc2CMIKSgvSDV4O6hB2E
+gITjhUeFq4YOhnKG14c7h5+IBIhpiM6JM4mZif6KZIrKizCLlov8jGOMyo0xjZiN/45mjs6PNo+ekAaQ
+bpDWkT+RqJIRknqS45NNk7aUIJSKlPSVX5XJljSWn5cKl3WX4JhMmLiZJJmQmfyaaJrVm0Kbr5wcnImc
+951kndKeQJ6unx2fi5/6oGmg2KFHobaiJqKWowajdqPmpFakx6U4pammGqaLpv2nbqfgqFKoxKk3qamq
+HKqPqwKrdavprFys0K1ErbiuLa6hrxavi7AAsHWw6rFgsdayS7LCszizrrQltJy1E7WKtgG2ebbwt2i3
+4LhZuNG5SrnCuju6tbsuu6e8IbybvRW9j74KvoS+/796v/XAcMDswWfB48JfwtvDWMPUxFHEzsVLxcjG
+RsbDx0HHv8g9yLzJOsm5yjjKt8s2y7bMNcy1zTXNtc42zrbPN8+40DnQutE80b7SP9LB00TTxtRJ1MvV
+TtXR1lXW2Ndc1+DYZNjo2WzZ8dp22vvbgNwF3IrdEN2W3hzeot8p36/gNuC94UThzOJT4tvjY+Pr5HPk
+/OWE5g3mlucf56noMui86Ubp0Opb6uXrcOv77IbtEe2c7ijutO9A78zwWPDl8XLx//KM8xnzp/Q09ML1
+UPXe9m32+/eK+Bn4qPk4+cf6V/rn+3f8B/yY/Sn9uv5L/tz/bf//cGFyYQAAAAAAAwAAAAJmZgAA8qcA
+AA1ZAAAT0AAACg52Y2d0AAAAAAAAAAEAAQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAABu
+ZGluAAAAAAAAADYAAKPAAABUgAAATMAAAJmAAAAmgAAAD0AAAFBAAABUQAACMzMAAjMzAAIzMwAAAAAA
+AAAAc2YzMgAAAAAAAQu3AAAFlv//81cAAAcpAAD91///+7f///2mAAAD2gAAwPZtbW9kAAAAAAAATC0A
+AAIeSEEyMMDDgoAAAAAAAAAAAAAAAAAAAAAA0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc18QEE5TQml0
+bWFwSW1hZ2VSZXCjJykqWk5TSW1hZ2VSZXBYTlNPYmplY3TSJSYsLVdOU0FycmF5oiwq0iUmLzBeTlNN
+dXRhYmxlQXJyYXmjLywq0zIzCjQ1NldOU1doaXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOADNIlJjg5V05T
+Q29sb3KiOCrSJSY7PFdOU0ltYWdlojsqXxAPTlNLZXllZEFyY2hpdmVy0T9AVHJvb3SAAQAIABEAGgAj
+AC0AMgA3AEYATABXAF4AZQByAHkAgQCDAIUAigCMAI4AlwCcAKcAqQCrAK0AsgC1ALcAuQC7AL0AwgDZ
+ANsA3RMXExwTJxMwE0MTRxNSE1sTYBNoE2sTcBN/E4MTihOSE58TpBOmE6gTrRO1E7gTvRPFE8gT2hPd
+E+IAAAAAAAACAQAAAAAAAABBAAAAAAAAAAAAAAAAAAAT5A
 </mutableData>
         </image>
         <image name="playicon_w" width="101" height="102"/>

@@ -752,7 +752,7 @@ typedef NS_ENUM(NSInteger, A)
    return alleKommentareArray;
 }
 
-- (int)AufnahmeNummerVon:(NSString*) dieAufnahme
+- (long)AufnahmeNummerVon:(NSString*) dieAufnahme
 {
    NSString* tempAufnahme=[dieAufnahme copy];
    int posLeerstelle1=0;
@@ -849,7 +849,7 @@ typedef NS_ENUM(NSInteger, A)
                  if ([Filemanager fileExistsAtPath:tempKommentarPfad])//Kommentar fuer diese Aufnahme ist da)
                  {
                     //
-                    int n=[self AufnahmeNummerVon:eineAufnahme];
+                    long n=[self AufnahmeNummerVon:eineAufnahme];
                     if (n>letzte)
                     {
                        letzte=n;
