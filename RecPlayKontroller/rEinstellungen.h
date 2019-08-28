@@ -23,5 +23,4 @@
 - (void)setNote:(BOOL)mitNote;
 - (void)setTimeoutDelay:(NSTimeInterval)derDelay;
 - (void)setzeAnzeigeFeld:(NSString *)anzeige;
-- (IBAction)reportHelp:(id)sender;
 @end

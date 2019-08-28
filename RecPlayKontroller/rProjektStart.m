@@ -326,6 +326,11 @@ extern const int StartmitDialog;//=2;
 #pragma mark -
 #pragma mark ProjectTable delegate:
 
+- (void)EnterKeyNotifikationAktion:(NSNotification*)note
+{
+   NSLog(@"ProjektListe EnterKeyNotifikationAktion");
+}
+
 - (void)EingabeChangeNotificationAktion:(NSNotification*)note
 {
    //NSLog(@"ProjektListe NSTextDidChangeNotification");

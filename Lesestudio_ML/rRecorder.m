@@ -669,7 +669,7 @@ NSString*	RPDevicedatenKey=	@"RPDevicedaten";
                NSString* s3=@"Das Programm wird beendet";
                NSString* InformationString=[NSString stringWithFormat:@"%@\n%@",s2,s3];
                [Warnung setInformativeText:InformationString];
-               [Warnung setAlertStyle:NSWarningAlertStyle];
+               [Warnung setAlertStyle:NSAlertStyleWarning];
                
                //[Warnung setIcon:RPImage];
                long antwort=[Warnung runModal];
@@ -3580,7 +3580,7 @@ QTMovie* qtMovie;
    [Warnung addButtonWithTitle:@"Abbrechen"];
    [Warnung setMessageText:@"Alles gesichert?:"];
    [Warnung setInformativeText:@"Es werden alle ungesicherten Aufnahmen geloescht."];
-   [Warnung setAlertStyle:NSWarningAlertStyle];
+      [Warnung setAlertStyle:NSAlertStyleWarning];
    long modalAntwort=[Warnung runModal];
    //NSLog(@"Logout modalAntwort: %d",modalAntwort);
    switch (modalAntwort)
@@ -4137,7 +4137,7 @@ QTMovie* qtMovie;
       //[Warnung addButtonWithTitle:@"Cancel"];
       [Warnung setMessageText:@"Projekt ist nicht aktiviert"];
       [Warnung setInformativeText:@"Recorder kann nicht geöffnet werden."];
-      [Warnung setAlertStyle:NSWarningAlertStyle];
+      [Warnung setAlertStyle:NSAlertStyleWarning];
       NSImage* RPImage = [NSImage imageNamed: @"MicroIcon"];
       [Warnung setIcon:RPImage];
       [Warnung runModal];
@@ -5055,7 +5055,7 @@ QTMovie* qtMovie;
            [Warnung addButtonWithTitle:@"Abbrechen"];
            [Warnung setMessageText:@"Alles gesichert?:"];
            [Warnung setInformativeText:@"Es werden alle ungesicherten Aufnahmen geloescht."];
-           [Warnung setAlertStyle:NSWarningAlertStyle];
+         //  [Warnung setAlertStyNSAlertStyleWarningyle];
            long modalAntwort=[Warnung runModal];
            //NSLog(@"Logout modalAntwort: %d",modalAntwort);
            switch (modalAntwort)
@@ -5360,7 +5360,7 @@ if (!self.KommentarFenster)
       //[RecorderWarnung addButtonWithTitle:@"Cancel"];
       [NamenWarnung setMessageText:@"Kein Name"];
       [NamenWarnung setInformativeText:@"Ein Name muss ausgewaehlt sein."];
-      [NamenWarnung setAlertStyle:NSWarningAlertStyle];
+   //   [NamenWarnung setAlertStyNSAlertStyleWarningyle];
       [NamenWarnung runModal];
       return;
       
@@ -5833,7 +5833,7 @@ if (!self.KommentarFenster)
    NSString* I0=[NSString stringWithFormat:@"%@\n%@\n%@",i3,i2,i1];
    [Warnung setAccessoryView:ExportOrdnerFeld];
    [Warnung setInformativeText:I0];
-   [Warnung setAlertStyle:NSWarningAlertStyle];
+  // [Warnung setAlertStyNSAlertStyleWarningyle];
    
    long ersteaufnahmeantwort=[Warnung runModal];
    
@@ -6194,7 +6194,7 @@ if (!self.KommentarFenster)
    [Warnung addButtonWithTitle:@"Abbrechen"];
    [Warnung setMessageText:@"Markierungen entfernen?"];
    [Warnung setInformativeText:@"Sollen wirklich alle Markierungen von allen Lesern entfernt werden?"];
-   [Warnung setAlertStyle:NSWarningAlertStyle];
+//  [Warnung setAlertStyNSAlertStyleWarningyle];
    
    NSModalResponse antwort = [Warnung runModal];
    if (antwort==NSAlertFirstButtonReturn)

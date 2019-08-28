@@ -800,7 +800,7 @@
 		//NSLog(@"neuerHostName: %@",neuerHostName);
 		[ComputerName replaceOccurrencesOfString:@"." withString:@"-" options:NSLiteralSearch range:NSMakeRange(0, [ComputerName length])];
 		[ComputerName replaceOccurrencesOfString:@" " withString:@"-" options:NSLiteralSearch range:NSMakeRange(0, [ComputerName length])];
-		NSArray* MV=[[NSWorkspace sharedWorkspace]mountedLocalVolumePaths];
+//		NSArray* MV=[[NSWorkspace sharedWorkspace]mountedLocalVolumePaths];
 		//int AnzUser=[MV count];
 		//NSLog(@"MV: %@  Anzahl: %d",[MV description], AnzUser);
 		BOOL istOK=NO;

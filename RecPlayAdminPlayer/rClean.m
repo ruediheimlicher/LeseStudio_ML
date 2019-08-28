@@ -943,7 +943,7 @@ return tempTitelArray;
 		//[Warnung addButtonWithTitle:@"Cancel"];
 		[Warnung setMessageText:@"Fehler beim Loeschen:"];
 		[Warnung setInformativeText:FehlerString];
-		[Warnung setAlertStyle:NSWarningAlertStyle];
+ //  [Warnung setAlertSNSAlertStyleWarningStyle];
 		[Warnung runModal];
 		
 		return;
