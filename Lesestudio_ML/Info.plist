@@ -30,7 +30,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-   <key>NSMicrophoneUsageDescription</key>
-   <string>Need microphone access for uploading videos</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Need microphone access for recording Audio</string>
 </dict>
 </plist>

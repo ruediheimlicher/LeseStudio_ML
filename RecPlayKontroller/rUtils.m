@@ -1366,7 +1366,7 @@ return versionOK;
 		{
 			
 			int n=0;
-			if (![KlassenArray indexOfObjectIdenticalTo:@""]==NSNotFound)
+         if (!([KlassenArray indexOfObjectIdenticalTo:@""]==NSNotFound))
 			{
 				int leer=[KlassenArray indexOfObjectIdenticalTo:@""];
 				//NSLog(@"leer: %d",leer);
@@ -1791,7 +1791,7 @@ return versionOK;
 	NSFileManager *Filemanager=[NSFileManager defaultManager];
 	if ([Filemanager fileExistsAtPath:tempPListPfad])
 	{
-		NSMutableDictionary*  tempPListDic=[NSDictionary dictionaryWithContentsOfFile:tempPListPfad];
+		NSMutableDictionary*  tempPListDic=[NSMutableDictionary dictionaryWithContentsOfFile:tempPListPfad];
 		if ([tempPListDic objectForKey:@"projektarray"])
 		{
 			return [tempPListDic objectForKey:@"projektarray"];

@@ -797,7 +797,7 @@ NSString*	RPExportformatKey;
 				NSAlert *Warnung = [[NSAlert alloc] init];
 				[Warnung addButtonWithTitle:@"OK"];
 				[Warnung setMessageText:@"Keine markierten Aufnahmen"];
-				[Warnung setAlertStyle:NSWarningAlertStyle];
+			//	[Warnung setAlertStyle:NSWarningAlertStyle];
 				
 				//[Warnung setIcon:RPImage];
 				[Warnung runModal];

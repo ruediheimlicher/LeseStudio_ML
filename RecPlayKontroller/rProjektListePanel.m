@@ -236,4 +236,17 @@
 		
 	  }
 }
+- (nonnull NSCollectionViewItem *)collectionView:(nonnull NSCollectionView *)collectionView itemForRepresentedObjectAtIndexPath:(nonnull NSIndexPath *)indexPath { 
+   return nil;
+}
+
+- (NSInteger)collectionView:(nonnull NSCollectionView *)collectionView numberOfItemsInSection:(NSInteger)section 
+{ 
+   return 1;
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder { 
+   return;
+}
+
 @end

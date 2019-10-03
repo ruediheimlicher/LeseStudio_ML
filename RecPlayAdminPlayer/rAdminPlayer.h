@@ -170,7 +170,7 @@
 @property (weak)  IBOutlet NSButton*					RewindKnopf;
 @property (weak)  IBOutlet NSButton*					ForewardKnopf;
 
-@property (weak) NSPopUpButton*                    ProjektPop;
+//@property (weak) NSPopUpButton*                    ProjektPop;
 
 @property (weak)  IBOutlet NSButton*					KommentarfensterKnopf;
 
